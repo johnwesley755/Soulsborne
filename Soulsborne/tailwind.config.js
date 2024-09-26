@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         primary: "#f0f2f5",
-        secondary: "#d74de3",
+        secondary: "#6C63FF",
         tertiary: "#222222",
         slate: {
           10: "#f1f3f4",

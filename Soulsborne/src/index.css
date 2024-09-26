@@ -73,7 +73,7 @@
   }
 
   .btn_secondary_rounded  { 
-    @apply  medium-15 border border-secondary bg-secondary px-7 py-3 text-white transition-all hover:bg-[#faaffd] rounded-full 
+    @apply  medium-15 border border-secondary bg-secondary px-7 py-3 text-white transition-all hover:bg-[#4438ac] rounded-full 
   }
 
   .max-container {

@@ -6,7 +6,7 @@ const Navbar = ({ containerStyles }) => {
   return (
     <nav className={containerStyles}>
       <NavLink
-        to={"/"}
+        to={"/home"}
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
@@ -15,7 +15,7 @@ const Navbar = ({ containerStyles }) => {
         </div>
       </NavLink>
       <NavLink
-        to={"/mens"}
+        to={"/profile"}
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
@@ -24,7 +24,7 @@ const Navbar = ({ containerStyles }) => {
         </div>
       </NavLink>
       <NavLink
-        to={"/womens"}
+        to={"/library"}
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
@@ -33,7 +33,7 @@ const Navbar = ({ containerStyles }) => {
         </div>
       </NavLink>
       <NavLink
-        to={"/kids"}
+        to={"/my"}
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
