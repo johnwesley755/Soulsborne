@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';  // Import ToastContainer
+import 'react-toastify/dist/ReactToastify.css';  // Import toastify CSS
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
@@ -11,6 +13,7 @@ const App = () => {
     <main className="">
       <BrowserRouter>
         <Header />
+        <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/signup" element={<Signup />} />

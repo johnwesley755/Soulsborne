@@ -1,14 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import forgotPasswordImage from "../assets/forgot-password.svg"; // Example image
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle the forgot password logic here (e.g., send password reset link)
-    console.log("Password reset link sent to:", email);
+
+    if (!email) {
+      toast.error("Email is required!", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    } else {
+      // Handle the forgot password logic here (e.g., send password reset link)
+      console.log("Password reset link sent to:", email);
+      toast.success("Password reset link sent!", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    }
   };
 
   return (
