@@ -15,6 +15,8 @@ const Header = () => {
         {/* Logo */}
         <div className="mr-48 ml-10 mt-4">
           <Link to="/">
+            {" "}
+            {/* Link to Home page */}
             <img
               src=""
               alt="Logo"
@@ -43,7 +45,9 @@ const Header = () => {
         </div>
 
         {/* Login Button */}
-        <button className="hidden md:block btn_dark_rounded">Login</button>
+        <Link to="/login">
+          <button className="hidden md:block btn_dark_rounded">Login</button>
+        </Link>
       </div>
 
       {/* Mobile Navbar */}
@@ -54,6 +58,24 @@ const Header = () => {
             : "hidden"
         }`}
       />
+
+      {/* Additional Mobile Links for Login and Signup */}
+      {menuOpened && (
+        <div className="flex flex-col gap-y-4 px-6 py-2">
+          <Link
+            to="/signup"
+            className="text-center p-2 bg-blue-500 text-white rounded-md"
+          >
+            Sign Up
+          </Link>
+          <Link
+            to="/login"
+            className="text-center p-2 bg-gray-700 text-white rounded-md"
+          >
+            Login
+          </Link>
+        </div>
+      )}
     </header>
   );
 };
