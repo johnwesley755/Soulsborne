@@ -6,7 +6,7 @@ const Navbar = ({ containerStyles }) => {
   return (
     <nav className={containerStyles}>
       <NavLink
-        to={"/home"}
+        to={"/"}
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">

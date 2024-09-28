@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Select from "react-select";
-import illustrationImage from "../assets/illustration-image(3).svg"; // Your illustration image
+import illustrationImage from "../assets/illustration-image.svg"; // Your illustration image
 import countries from "react-select-country-list"; // Import country list
 
 const Profile = () => {
@@ -10,6 +10,7 @@ const Profile = () => {
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
   const [dob, setDob] = useState("");
+  const [email, setEmail] = useState(""); // New email state
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [postalCode, setPostalCode] = useState("");
@@ -41,9 +42,9 @@ const Profile = () => {
   };
 
   return (
-    <div className="mt-20 flex items-center justify-center bg-blue-100 py-12">
+    <div className="mt-20 flex items-center justify-center bg-blue-100 max-md:bg-white py-12">
       {/* Profile Container */}
-      <div className="bg-white shadow-lg rounded-lg flex flex-col md:flex-row w-full max-w-4xl">
+      <div className="bg-white shadow-lg rounded-lg flex flex-col md:flex-row w-full max-w-6xl lg:p-16">
         {/* Left Side: Illustration & Top Text */}
         <div className="w-full md:w-1/2 flex flex-col items-center mt-4 p-6">
           {/* Top Text (aligned to left) */}
@@ -58,33 +59,36 @@ const Profile = () => {
           <img
             src={illustrationImage}
             alt="Illustration"
-            className="w-3/4 h-auto"
+            className="w-full h-auto md:h-96 mt-20 object-contain" // Adjusted height
           />
         </div>
 
         {/* Right Side: Form */}
         <div className="w-full md:w-1/2 p-8">
-          {/* Form Content */}
-          <div className="space-y-6">
+          {/* Form Content with Two Columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Profile Image Upload */}
-            <div className="text-center">
+            <div className="col-span-full text-center mb-6">
               <label className="block text-gray-600 mb-2">Profile Photo</label>
-              {profileImage ? (
-                <img
-                  src={profileImage}
-                  alt="Profile"
-                  className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
-                />
-              ) : (
-                <div className="w-24 h-24 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-gray-500">No Image</span>
-                </div>
-              )}
+              <label className="cursor-pointer" htmlFor="file-upload">
+                {profileImage ? (
+                  <img
+                    src={profileImage}
+                    alt="Profile"
+                    className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
+                  />
+                ) : (
+                  <div className="w-24 h-24 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-gray-500">No Image</span>
+                  </div>
+                )}
+              </label>
               <input
                 type="file"
                 accept="image/*"
+                id="file-upload"
                 onChange={handleImageUpload}
-                className="text-center"
+                className="hidden" // Hide the file input
               />
             </div>
 
@@ -97,6 +101,19 @@ const Profile = () => {
                 onChange={(e) => setName(e.target.value)}
                 className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
                 placeholder="Enter your name"
+              />
+            </div>
+
+            {/* Email Input */}
+            <div>
+              <label className="block text-gray-600 mb-2">Email</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                placeholder="Enter your email"
+                required
               />
             </div>
 
