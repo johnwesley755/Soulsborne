@@ -10,7 +10,7 @@ const Header = () => {
   const toggleMenu = () => setMenuOpened(!menuOpened);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-20 bg-white shadow-md">
+    <header className="fixed top-0 left-0 w-full z-20 bg-white shadow-md font-semibold">
       <div className="flex justify-between items-center py-4 px-6">
         {/* Logo */}
         <div className="mr-48 ml-10 mt-4">
