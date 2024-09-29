@@ -44,7 +44,9 @@ const Profile = () => {
   return (
     <div className="mt-20 flex items-center justify-center bg-blue-100 max-md:bg-white py-12">
       {/* Profile Container */}
-      <div className="bg-white shadow-lg rounded-lg flex flex-col md:flex-row w-full max-w-6xl lg:p-16">
+      <div className="bg-white shadow-lg rounded-lg flex flex-col md:flex-row w-full max-w-6xl lg:p-16 p-10">
+        {" "}
+        {/* Increased padding */}
         {/* Left Side: Illustration & Top Text */}
         <div className="w-full md:w-1/2 flex flex-col items-center mt-4 p-6">
           {/* Top Text (aligned to left) */}
@@ -62,11 +64,10 @@ const Profile = () => {
             className="w-full h-auto md:h-96 mt-20 object-contain" // Adjusted height
           />
         </div>
-
         {/* Right Side: Form */}
-        <div className="w-full md:w-1/2 p-8">
+        <div className="w-full md:w-1/2">
           {/* Form Content with Two Columns */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
             {/* Profile Image Upload */}
             <div className="col-span-full text-center mb-6">
               <label className="block text-gray-600 mb-2">Profile Photo</label>
@@ -93,48 +94,48 @@ const Profile = () => {
             </div>
 
             {/* Name Input */}
-            <div>
+            <div className="col-span-1">
               <label className="block text-gray-600 mb-2">Name</label>
               <input
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" // Added padding
                 placeholder="Enter your name"
               />
             </div>
 
             {/* Email Input */}
-            <div>
+            <div className="col-span-1">
               <label className="block text-gray-600 mb-2">Email</label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" // Added padding
                 placeholder="Enter your email"
                 required
               />
             </div>
 
             {/* Date of Birth Input */}
-            <div>
+            <div className="col-span-1">
               <label className="block text-gray-600 mb-2">Date of Birth</label>
               <input
                 type="date"
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" // Added padding
               />
             </div>
 
             {/* Gender Input */}
-            <div>
+            <div className="col-span-1">
               <label className="block text-gray-600 mb-2">Gender</label>
               <select
                 value={gender}
                 onChange={(e) => setGender(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" // Added padding
               >
                 <option value="" disabled>
                   Select your gender
@@ -146,7 +147,7 @@ const Profile = () => {
             </div>
 
             {/* Country Selector with Flags */}
-            <div>
+            <div className="col-span-1">
               <label className="block text-gray-600 mb-2">Country</label>
               <Select
                 options={countryOptions}
@@ -154,52 +155,53 @@ const Profile = () => {
                 value={countryOptions.find(
                   (option) => option.value === selectedCountry
                 )}
+                className="w-full"
               />
             </div>
 
             {/* Phone Number Input */}
-            <div>
+            <div className="col-span-1">
               <label className="block text-gray-600 mb-2">Phone Number</label>
               <PhoneInput
                 country={selectedCountry.toLowerCase()}
                 value={phone}
                 onChange={(phone) => setPhone(phone)}
-                inputClass="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                inputClass="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" // Consistent width and padding
               />
             </div>
 
             {/* City Input */}
-            <div>
+            <div className="col-span-1">
               <label className="block text-gray-600 mb-2">City</label>
               <input
                 type="text"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" // Added padding
                 placeholder="Enter your city"
               />
             </div>
 
             {/* State Input */}
-            <div>
+            <div className="col-span-1">
               <label className="block text-gray-600 mb-2">State</label>
               <input
                 type="text"
                 value={state}
                 onChange={(e) => setState(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" // Added padding
                 placeholder="Enter your state"
               />
             </div>
 
             {/* Postal Code Input */}
-            <div>
+            <div className="col-span-1">
               <label className="block text-gray-600 mb-2">Postal Code</label>
               <input
                 type="text"
                 value={postalCode}
                 onChange={(e) => setPostalCode(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" // Added padding
                 placeholder="Enter your postal code"
               />
             </div>

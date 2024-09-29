@@ -8,6 +8,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import Profile from "./pages/Profile";
+import Footer from "./components/Footer"
 const App = () => {
   return (
     <main className="">
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
+        <Footer />  
       </BrowserRouter>
     </main>
   );

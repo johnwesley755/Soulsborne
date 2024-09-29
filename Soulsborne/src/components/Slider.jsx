@@ -16,33 +16,16 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-// Arrow components defined first
+// Arrow components with Tailwind classes
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
-      style={{
-        ...style,
-        display: "flex", // Use flexbox
-        justifyContent: "center", // Center horizontally
-        alignItems: "center", // Center vertically
-        background: "white",
-        borderRadius: "50%",
-        right: "10px",
-        zIndex: 1,
-        padding: "10px",
-        border: "2px solid black",
-        width: "50px",
-        height: "50px",
-        cursor: "pointer", // Change cursor to pointer
-      }}
+      className={`${className} flex justify-center items-center bg-white rounded-full p-2 border-2 border-black w-12 h-12 right-3 cursor-pointer z-10 transition-transform duration-300 ease-in-out hover:scale-105`}
       onClick={onClick}
+      style={{ ...style }}
     >
-      <FontAwesomeIcon
-        icon={faChevronRight}
-        style={{ color: "black", fontSize: "24px" }}
-      />
+      <FontAwesomeIcon icon={faChevronRight} className="text-black text-2xl" />
     </div>
   );
 };
@@ -51,28 +34,11 @@ const PrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
-      style={{
-        ...style,
-        display: "flex", // Use flexbox
-        justifyContent: "center", // Center horizontally
-        alignItems: "center", // Center vertically
-        background: "white",
-        borderRadius: "50%",
-        left: "10px",
-        zIndex: 1,
-        padding: "10px",
-        border: "2px solid black",
-        width: "50px",
-        height: "50px",
-        cursor: "pointer", // Change cursor to pointer
-      }}
+      className={`${className} flex justify-center items-center bg-white rounded-full p-2 border-2 border-black w-12 h-12 left-3 cursor-pointer z-10 transition-transform duration-300 ease-in-out hover:scale-105`}
       onClick={onClick}
+      style={{ ...style }}
     >
-      <FontAwesomeIcon
-        icon={faChevronLeft}
-        style={{ color: "black", fontSize: "24px" }}
-      />
+      <FontAwesomeIcon icon={faChevronLeft} className="text-black text-2xl" />
     </div>
   );
 };
@@ -153,19 +119,20 @@ const Slider = () => {
 
   return (
     <section className="relative">
-      <h1 className="text-center font-bold text-3xl mt-10">Key Achievements</h1>
+      <h1 className="text-center font-bold text-3xl mt-10 mb-8 animate-fade-in-up">
+        Key Achievements
+      </h1>
       <SliderLib {...sliderSettings} className="overflow-hidden">
         {slidesData.map((slide, index) => (
-          <div key={index} className="p-10">
-            {" "}
-            {/* Updated padding here */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div key={index} className="px-6 sm:px-4 lg:px-8">
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
               <img
                 src={slide.image}
                 alt={slide.title}
                 className="w-full h-64 object-contain"
+                loading="lazy"
               />
-              <div className="p-4">
+              <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{slide.title}</h3>
                 <p className="text-gray-700">{slide.description}</p>
               </div>
