@@ -10,7 +10,7 @@ const BuildCompetitiveness = () => {
       <div className="max-w-7xl mx-auto">
         {/* Headline Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-black mb-4">
+          <h1 className="text-5xl max-sm:text-4xl font-bold text-black mb-4">
             Build Your Competitiveness
           </h1>
           <p className="text-lg lg:text-xl text-gray-600">
