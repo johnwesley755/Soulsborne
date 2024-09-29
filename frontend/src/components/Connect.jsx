@@ -42,12 +42,14 @@ const Connect = () => {
             </p>
           </div>
         </div>
-        <NavLink
-          to="/community"
-          className="mt-8 btn_secondary_rounded flexCenter px-6 py-3 text-white bg-secondary hover:bg-secondary-dark transition duration-300 rounded-lg"
-        >
-          Join Our Community
-        </NavLink>
+        <div className="mt-10">
+          <NavLink
+            to="/"
+            className="btn_secondary_rounded font-bold px-7 py-3 rounded-full shadow-xl transition-all duration-300 hover:shadow-2xl"
+          >
+            Join our Community
+          </NavLink>
+        </div>
       </div>
     </section>
   );
