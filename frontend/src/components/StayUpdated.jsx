@@ -30,7 +30,7 @@ const StayUpdated = () => {
         {/* Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           {/* Card 1 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105 cursor-pointer">
             <FaCalendarAlt className="text-4xl text-secondary mb-4 mx-auto" />
             <h3 className="text-xl font-semibold mb-2">Upcoming Events</h3>
             <p className="text-gray-600">
@@ -50,7 +50,7 @@ const StayUpdated = () => {
             </ul>
           </div>
           {/* Card 2 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105 cursor-pointer">
             <FaBullhorn className="text-4xl text-secondary mb-4 mx-auto" />
             <h3 className="text-xl font-semibold mb-2">Latest News</h3>
             <p className="text-gray-600">
@@ -70,7 +70,7 @@ const StayUpdated = () => {
             </ul>
           </div>
           {/* Card 3 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105 cursor-pointer">
             <FaChartLine className="text-4xl text-secondary mb-4 mx-auto" />
             <h3 className="text-xl font-semibold mb-2">Market Insights</h3>
             <p className="text-gray-600">
@@ -92,7 +92,7 @@ const StayUpdated = () => {
         </div>
 
         {/* Subscription Form */}
-        <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto">
+        <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto cursor-pointer">
           <h3 className="text-xl font-semibold mb-4 text-tertiary">
             Subscribe for Updates
           </h3>

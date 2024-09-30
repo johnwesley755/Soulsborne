@@ -24,7 +24,7 @@ const SharpenSkills = () => {
         {/* Image Gallery with Skill Descriptions */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Skill 1: Web Development */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
             <img
               src={skillImage1}
               alt="Web Development"
@@ -38,7 +38,7 @@ const SharpenSkills = () => {
           </div>
 
           {/* Skill 2: Graphic Design */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
             <img
               src={skillImage2}
               alt="Graphic Design"
@@ -52,7 +52,7 @@ const SharpenSkills = () => {
           </div>
 
           {/* Skill 3: Digital Marketing */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
             <img
               src={skillImage3}
               alt="Digital Marketing"
@@ -66,7 +66,7 @@ const SharpenSkills = () => {
           </div>
 
           {/* Skill 4: Data Science */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
             <img
               src={skillImage4}
               alt="Data Science"
@@ -80,7 +80,7 @@ const SharpenSkills = () => {
           </div>
 
           {/* Skill 5: Public Speaking */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
             <img
               src={skillImage5}
               alt="Public Speaking"
@@ -94,7 +94,7 @@ const SharpenSkills = () => {
           </div>
 
           {/* Skill 6: Project Management */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
             <img
               src={skillImage6}
               alt="Project Management"

@@ -15,7 +15,7 @@ const Connect = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Card 1 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105 cursor-pointer">
             <FaUserFriends className="text-4xl text-secondary mb-4 mx-auto" />
             <h3 className="text-xl font-semibold mb-2">Network</h3>
             <p className="text-gray-600">
@@ -24,7 +24,7 @@ const Connect = () => {
             </p>
           </div>
           {/* Card 2 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105 cursor-pointer">
             <FaComments className="text-4xl text-secondary mb-4 mx-auto" />
             <h3 className="text-xl font-semibold mb-2">Collaborate</h3>
             <p className="text-gray-600">
@@ -33,7 +33,7 @@ const Connect = () => {
             </p>
           </div>
           {/* Card 3 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+          <div className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105 cursor-pointer">
             <FaUsers className="text-4xl text-secondary mb-4 mx-auto" />
             <h3 className="text-xl font-semibold mb-2">Join Events</h3>
             <p className="text-gray-600">

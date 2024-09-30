@@ -17,7 +17,7 @@ const GetPlaced = () => {
         {/* Card Layout for Career Opportunities */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Card 1: Career Opportunities */}
-          <div className="bg-white rounded-lg p-6 transition-transform duration-300 hover:scale-105 shadow-lg">
+          <div className="bg-white rounded-lg p-6 transition-transform duration-300 hover:scale-105 shadow-lg cursor-pointer">
             <FaBriefcase className="text-4xl text-secondary mb-4 mx-auto" />
             <h3 className="text-2xl font-bold mt-4 text-black">Career Opportunities</h3>
             <p className="text-gray-700 mt-2">
@@ -33,7 +33,7 @@ const GetPlaced = () => {
           </div>
 
           {/* Card 2: Direct Connections */}
-          <div className="bg-white rounded-lg p-6 transition-transform duration-300 hover:scale-105 shadow-lg">
+          <div className="bg-white rounded-lg p-6 transition-transform duration-300 hover:scale-105 shadow-lg cursor-pointer">
             <FaHandshake className="text-4xl text-secondary mb-4 mx-auto" />
             <h3 className="text-2xl font-bold mt-4 text-black">Direct Connections</h3>
             <p className="text-gray-700 mt-2">
@@ -49,7 +49,7 @@ const GetPlaced = () => {
           </div>
 
           {/* Card 3: Skill Development */}
-          <div className="bg-white rounded-lg p-6 transition-transform duration-300 hover:scale-105 shadow-lg">
+          <div className="bg-white rounded-lg p-6 transition-transform duration-300 hover:scale-105 shadow-lg cursor-pointer">
             <FaUniversity className="text-4xl text-secondary mb-4 mx-auto" />
             <h3 className="text-2xl font-bold mt-4 text-black">Skill Development</h3>
             <p className="text-gray-700 mt-2">
