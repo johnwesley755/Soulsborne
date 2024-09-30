@@ -16,14 +16,14 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-// Arrow components with Tailwind classes
+// Centered arrow components
 const NextArrow = (props) => {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <div
-      className={`${className} flex justify-center items-center bg-white rounded-full p-2 border-2 border-black w-12 h-12 right-3 cursor-pointer z-10 transition-transform duration-300 ease-in-out hover:scale-105`}
+      className="flex justify-center items-center bg-white rounded-full p-2 border-2 border-black w-12 h-12 absolute z-10 cursor-pointer right-0 top-1/2 transform -translate-y-1/2"
       onClick={onClick}
-      style={{ ...style }}
+      style={{ right: "15px" }} // To give space from the edge
     >
       <FontAwesomeIcon icon={faChevronRight} className="text-black text-2xl" />
     </div>
@@ -31,12 +31,12 @@ const NextArrow = (props) => {
 };
 
 const PrevArrow = (props) => {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <div
-      className={`${className} flex justify-center items-center bg-white rounded-full p-2 border-2 border-black w-12 h-12 left-3 cursor-pointer z-10 transition-transform duration-300 ease-in-out hover:scale-105`}
+      className="flex justify-center items-center bg-white rounded-full p-2 border-2 border-black w-12 h-12 absolute z-10 cursor-pointer left-0 top-1/2 transform -translate-y-1/2"
       onClick={onClick}
-      style={{ ...style }}
+      style={{ left: "15px" }} // To give space from the edge
     >
       <FontAwesomeIcon icon={faChevronLeft} className="text-black text-2xl" />
     </div>
@@ -125,7 +125,7 @@ const Slider = () => {
       <SliderLib {...sliderSettings} className="overflow-hidden">
         {slidesData.map((slide, index) => (
           <div key={index} className="px-6 sm:px-4 lg:px-8">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:shadow-2xl">
               <img
                 src={slide.image}
                 alt={slide.title}
