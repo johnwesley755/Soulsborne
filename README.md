@@ -147,6 +147,7 @@ Tailwind CSS 💅: Utility-first CSS for creating sleek, responsive designs.
 Slick Carousel 🎡: For the smooth and engaging slider.
 FontAwesome 🎨: Icons to make the UI visually appealing and intuitive.
 
+---
 
 ## 📊 Achievements & Ranking System 🏆
 
