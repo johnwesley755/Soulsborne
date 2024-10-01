@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import TasksPage from "./pages/tasks"
 import ForgotPassword from "./pages/ForgotPassword";
 import Profile from "./pages/Profile";
 import Footer from "./components/Footer"
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path= "/tasks" element={<TasksPage />} />
         </Routes>
         <Footer />  
       </BrowserRouter>
