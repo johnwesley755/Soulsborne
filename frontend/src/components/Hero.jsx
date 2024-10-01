@@ -27,7 +27,7 @@ const Hero = () => {
           </p>
           <div className="flex max-xs:flex-col gap-2 mt-5">
             <NavLink to={"/home"} className="btn_secondary_rounded flexCenter">
-              Buy Now
+              Join Now
             </NavLink>
             <NavLink to={"/"} className="btn_dark_outline flexCenter gap-x-2">
               <MdOutlineLocalOffer className="text-2xl" />
