@@ -105,21 +105,22 @@ Ready to dive in? Follow these simple steps to get Soulsborne up and running in 
 Here’s a list of the dependencies used in **Soulsborne**, ensuring a smooth and responsive user experience:
 
 ```json
-"dependencies": {
-  "@fortawesome/fontawesome-svg-core": "^6.6.0",
-  "@fortawesome/free-solid-svg-icons": "^6.6.0",
-  "@fortawesome/react-fontawesome": "^0.2.2",
-  "flag-icon-css": "^4.1.7",
-  "react": "^18.3.1",
-  "react-dom": "^18.3.1",
-  "react-phone-input-2": "^2.15.1",
-  "react-select": "^5.8.1",
-  "react-select-country-list": "^2.2.3",
-  "react-slick": "^0.30.2",
-  "react-toastify": "^10.0.5",
-  "react-world-flags": "^1.6.0",
-  "slick-carousel": "^1.8.1"
-}
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "flag-icon-css": "^4.1.7",
+    "framer-motion": "^11.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-phone-input-2": "^2.15.1",
+    "react-select": "^5.8.1",
+    "react-select-country-list": "^2.2.3",
+    "react-slick": "^0.30.2",
+    "react-toastify": "^10.0.5",
+    "react-world-flags": "^1.6.0",
+    "slick-carousel": "^1.8.1"
+  }
 ```
 
 ---
