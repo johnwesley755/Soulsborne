@@ -39,7 +39,7 @@ const Navbar = ({ containerStyles }) => {
       >
         <div className="flexCenter gap-x-1">
           <MdContacts />
-          About Us
+          Company
         </div>
       </NavLink>
     </nav>
