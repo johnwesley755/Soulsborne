@@ -33,12 +33,12 @@ const Navbar = ({ containerStyles }) => {
         </div>
       </NavLink>
       <NavLink
-        to={"/my"}
+        to={"/company"}
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
           <MdContacts />
-          My Achievements
+          Company
         </div>
       </NavLink>
     </nav>

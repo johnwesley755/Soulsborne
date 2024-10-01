@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Tasks from "./pages/Tasks"
 import ForgotPassword from "./pages/ForgotPassword";
 import Profile from "./pages/Profile";
+import Company from "./pages/company";
 import Footer from "./components/Footer"
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/profile" element={<Profile />} />
           <Route path= "/tasks" element={<Tasks />} />
+          <Route path= "/company" element={<Company />} />
         </Routes>
         <Footer />  
       </BrowserRouter>

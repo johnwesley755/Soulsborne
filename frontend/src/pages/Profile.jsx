@@ -210,7 +210,7 @@ const Profile = () => {
           {/* Closing Message */}
           <div className="text-center mt-6">
             <p className="text-gray-700 text-lg">
-              Excited to know you better! 😊
+              Lets start to A.S.C.E.N.D! 😊
             </p>
           </div>
         </div>
