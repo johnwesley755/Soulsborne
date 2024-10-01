@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { MdCategory, MdContacts, MdHomeFilled, MdShop2 } from "react-icons/md";
 
+
 const Navbar = ({ containerStyles }) => {
   return (
     <nav className={containerStyles}>
@@ -38,7 +39,7 @@ const Navbar = ({ containerStyles }) => {
       >
         <div className="flexCenter gap-x-1">
           <MdContacts />
-          Company
+          About Us
         </div>
       </NavLink>
     </nav>
