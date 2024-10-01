@@ -121,19 +121,19 @@ const Tasks = () => {
           </p>
 
           {/* Display Streak for Current Week */}
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex flex-wrap justify-center gap-6 items-center mb-4">
             {weeklyStreaks[currentWeek].map((streak, index) => (
               <motion.div
                 key={index}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center min-w-0"
                 initial={{ scale: 0.9 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                <span className="text-5xl">
+                <span className="text-4xl sm:text-5xl">
                   {streak === 1 ? emojis.completed : emojis.pending}
                 </span>
-                <p className="mt-2 text-xl font-semibold">
+                <p className="mt-2 text-lg sm:text-xl font-semibold">
                   {daysOfWeek[index]}
                 </p>
               </motion.div>
@@ -149,14 +149,14 @@ const Tasks = () => {
           {/* Navigation Buttons */}
           <div className="flex justify-center gap-4">
             <button
-              className="bg-blue-500 text-white px-4 py-2 rounded-lg disabled:opacity-50"
+              className="btn_secondary_rounded px-4 py-2 rounded-lg disabled:opacity-50"
               onClick={handlePreviousWeek}
               disabled={currentWeek === 0}
             >
               Previous Week
             </button>
             <button
-              className="bg-blue-500 text-white px-4 py-2 rounded-lg disabled:opacity-50"
+              className="btn_secondary_rounded text-white px-4 py-2 rounded-lg disabled:opacity-50"
               onClick={handleNextWeek}
               disabled={currentWeek === weeklyStreaks.length - 1}
             >
