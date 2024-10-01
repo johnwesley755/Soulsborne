@@ -24,12 +24,12 @@ const Navbar = ({ containerStyles }) => {
         </div>
       </NavLink>
       <NavLink
-        to={"/library"}
+        to={"/tasks"}
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
           <MdShop2 />
-          Library
+          Tasks
         </div>
       </NavLink>
       <NavLink

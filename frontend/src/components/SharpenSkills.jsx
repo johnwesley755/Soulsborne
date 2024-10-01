@@ -86,10 +86,10 @@ const SharpenSkills = () => {
               alt="Public Speaking"
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
-            <h3 className="text-2xl font-bold text-black">Public Speaking</h3>
+            <h3 className="text-2xl font-bold text-black">Cybersecurity</h3>
             <p className="text-gray-700 mt-2">
-              Learn the art of communication and presentation to deliver
-              impactful speeches in any setting.
+            Master the fundamentals of cybersecurity, including network defense, threat analysis,
+            and ethical hacking, to protect digital assets. 
             </p>
           </div>
 
