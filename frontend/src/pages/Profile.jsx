@@ -42,7 +42,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="mt-20 flex items-center justify-center bg-blue-100 max-md:bg-white py-12">
+    <div className="mt-20 flex items-center justify-center bg-gradient-to-b from-blue-600 to-purple-700 max-md:bg-white py-12">
       {/* Profile Container */}
       <div className="bg-white shadow-lg rounded-lg flex flex-col md:flex-row w-full max-w-6xl lg:p-16 p-10">
         {" "}
@@ -50,10 +50,10 @@ const Profile = () => {
         {/* Left Side: Illustration & Top Text */}
         <div className="w-full md:w-1/2 flex flex-col items-center mt-4 p-6">
           {/* Top Text (aligned to left) */}
-          <h2 className="text-4xl font-bold text-gray-800 self-start mb-6">
+          <h2 className="text-5xl font-bold text-gray-800 self-start mb-6">
             Tell us more about you!
           </h2>
-          <p className="text-gray-600 self-start mb-6">
+          <p className="text-gray-600 self-start text-xl mb-6">
             Fill out your details to complete your profile.
           </p>
 

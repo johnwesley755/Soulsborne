@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { MdClose, MdMenu } from "react-icons/md";
-
+import soulsborneImg from "../assets/soulsborne(1).png"
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false); // State to manage mobile menu toggle
   const [isLoggedIn, setIsLoggedIn] = useState(false); // State to manage login status
@@ -24,9 +24,9 @@ const Header = () => {
         <div className="flex-shrink-0 ml-4">
           <Link to="/">
             <img
-              src="your-logo-url" // Replace with your logo URL or import statement
+              src={soulsborneImg} // Replace with your logo URL or import statement
               alt="Logo"
-              className="h-10 w-auto" // Adjust logo size
+              className="h-10 w-100" // Adjust logo size
             />
           </Link>
         </div>
