@@ -38,7 +38,7 @@ const tasks = [
 const Company = () => {
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 pt-16 pb-20 mt-20">
+    <section className="relative min-h-screen bg-gradient-to-r from-gray-500 to-gray-600 pt-16 pb-20 mt-20">
       <div className="max_padd_container z-10 relative flex flex-col gap-12">
         {/* Header */}
         <div className="text-center mb-10">

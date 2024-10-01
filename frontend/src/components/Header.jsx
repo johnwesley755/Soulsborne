@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { MdClose, MdMenu } from "react-icons/md";
+import soulsborne from "../assets/soulsborne.jpg";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false); // State to manage mobile menu toggle
@@ -20,11 +21,10 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-20 bg-white font-semibold">
       <div className="flex justify-between items-center py-4 px-6">
-        {/* Logo */}
         <div className="flex-shrink-0 ml-4">
           <Link to="/">
             <img
-              src="your-logo-url" // Replace with your logo URL or import statement
+              src={soulsborne} // Replace with your logo URL or import statement
               alt="Logo"
               className="h-10 w-auto" // Adjust logo size
             />
