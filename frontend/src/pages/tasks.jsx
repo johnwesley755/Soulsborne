@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import taskImage1 from "../assets/task1.svg";
 import taskImage2 from "../assets/task2.svg";
 import taskImage3 from "../assets/task3.svg";
@@ -46,6 +47,7 @@ const tasks = [
 
 const Tasks = () => {
   const [currentWeek, setCurrentWeek] = useState(1); // Start with current week
+  const navigate = useNavigate(); // Initialize navigate
 
   const handlePreviousWeek = () => {
     if (currentWeek > 0) setCurrentWeek(currentWeek - 1);
@@ -53,6 +55,11 @@ const Tasks = () => {
 
   const handleNextWeek = () => {
     if (currentWeek < weeklyStreaks.length - 1) setCurrentWeek(currentWeek + 1);
+  };
+
+  // Navigate to courses page
+  const navigateToCourses = () => {
+    navigate("/courses"); // Navigate to the /courses route
   };
 
   return (
@@ -108,6 +115,14 @@ const Tasks = () => {
                 <p className="text-lg font-semibold">
                   {task.progress}% Completed
                 </p>
+
+                {/* Learn Now Button */}
+                <button
+                  onClick={navigateToCourses} // Update the onClick function
+                  className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 font-semibold"
+                >
+                  Learn Now
+                </button>
               </div>
             </motion.div>
           ))}

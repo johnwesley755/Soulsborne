@@ -63,6 +63,26 @@ const Profile = () => {
     }
   };
 
+  // Function to handle profile update
+  const handleUpdateProfile = () => {
+    const profileData = {
+      name,
+      email,
+      dob,
+      gender,
+      country: selectedCountry,
+      phone,
+      city,
+      state,
+      postalCode,
+      profileImage,
+    };
+
+    console.log("Profile updated:", profileData);
+    // Here, you can implement the logic to send this data to your backend or save it locally
+    // For example, you might call an API to update the user profile on your server
+  };
+
   // Animation variants for smooth entry
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -241,60 +261,56 @@ const Profile = () => {
               placeholder="Enter your postal code"
             />
           </div>
-          {/* Chat Button */}
-          <motion.div
-            className="fixed right-10 bottom-10 z-50 flex flex-col items-end"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-          >
+
+          {/* Update Profile Button */}
+          <div className="col-span-full">
             <button
-              className="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 focus:outline-none"
+              onClick={handleUpdateProfile}
+              className="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition duration-200"
+            >
+              Update Profile
+            </button>
+          </div>
+
+          {/* Chatbot Section */}
+          <div className="col-span-full mt-10">
+            <button
+              className="bg-green-600 text-white px-4 py-2 rounded font-bold"
               onClick={() => setChatOpen(!chatOpen)}
             >
-              {chatOpen ? "Close Chat" : "Chat"}
+              Chat with Us
             </button>
-
-            {/* Chat Box */}
             {chatOpen && (
-              <motion.div
-                className="bg-white border border-gray-300 rounded-lg shadow-lg w-72 mt-4 p-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="h-64 overflow-y-scroll">
+              <div className="mt-4 border rounded-lg p-4 bg-gray-100">
+                <div className="h-48 overflow-y-auto">
                   {messages.map((msg, index) => (
-                    <div
-                      key={index}
-                      className={`p-2 my-2 rounded-lg ${
-                        msg.sender === "user"
-                          ? "bg-blue-100 text-right"
-                          : "bg-gray-100 text-left"
-                      }`}
-                    >
+                    <div key={index} className={`mb-2 ${msg.sender}`}>
+                      <span
+                        className={
+                          msg.sender === "user" ? "font-bold" : "text-gray-500"
+                        }
+                      >
+                        {msg.sender === "user" ? "You: " : "Bot: "}
+                      </span>
                       {msg.text}
                     </div>
                   ))}
                 </div>
-                <div className="mt-4 flex">
-                  <input
-                    type="text"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    placeholder="Type your message..."
-                    className="w-full p-2 border border-gray-300 rounded-lg"
-                  />
-                  <button
-                    className="bg-blue-500 text-white ml-2 px-4 rounded-lg"
-                    onClick={handleSendMessage}
-                  >
-                    Send
-                  </button>
-                </div>
-              </motion.div>
+                <input
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  className="border border-gray-300 rounded p-2 w-full"
+                  placeholder="Type a message..."
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleSendMessage();
+                    }
+                  }}
+                />
+              </div>
             )}
-          </motion.div>
+          </div>
         </motion.div>
       </motion.div>
     </div>
