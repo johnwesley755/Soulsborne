@@ -65,6 +65,8 @@ Soulsborne/
 │   │   ├── Login.jsx              # Login page for authentication
 │   │   ├── Profile.jsx            # User profile and settings
 │   │   └── Signup.jsx             # Signup page for new users
+│   │   └── Tasks.jsx
+│   │   └── Company.jsx 
 │
 ├── App.jsx                        # Root component
 ├── index.css                      # Entry point of the app
