@@ -42,6 +42,15 @@ const Navbar = ({ containerStyles }) => {
           Company
         </div>
       </NavLink>
+      <NavLink
+        to={"/freelance"}
+        className={({ isActive }) => (isActive ? "active_link" : "")}
+      >
+        <div className="flexCenter gap-x-1">
+          <MdContacts />
+          Freelancing
+        </div>
+      </NavLink>
     </nav>
   );
 };
