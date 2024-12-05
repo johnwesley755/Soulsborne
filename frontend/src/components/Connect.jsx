@@ -44,7 +44,7 @@ const Connect = () => {
         </div>
         <div className="mt-10">
           <NavLink
-            to="/"
+            to="/community"
             className="btn_secondary_rounded font-bold px-7 py-3 rounded-full shadow-xl transition-all duration-300 hover:shadow-2xl"
           >
             Join our Community

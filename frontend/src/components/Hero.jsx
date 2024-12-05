@@ -19,7 +19,7 @@ const Hero = () => {
             <NavLink to={"/signup"} className="btn_secondary_rounded flexCenter">
               Join Now
             </NavLink>
-            <NavLink to={"/"} className="btn_dark_outline flexCenter gap-x-2">
+            <NavLink to={"/student-profile"} className="btn_dark_outline flexCenter gap-x-2">
               <MdOutlineLocalOffer className="text-2xl" />
               Learn more
             </NavLink>

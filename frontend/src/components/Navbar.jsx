@@ -1,17 +1,26 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { MdCategory, MdContacts, MdHomeFilled, MdShop2 } from "react-icons/md";
-
+import {
+  FaHome,
+  FaUserAlt,
+  FaTasks,
+  FaBuilding,
+  FaSuitcase,
+} from "react-icons/fa"; // Importing different FontAwesome icons
 
 const Navbar = ({ containerStyles }) => {
   return (
     <nav className={containerStyles}>
+
+
+
+      {/* Navigation Links */}
       <NavLink
         to={"/"}
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
-          <MdHomeFilled />
+          <FaHome /> {/* Home Icon */}
           Home
         </div>
       </NavLink>
@@ -20,7 +29,7 @@ const Navbar = ({ containerStyles }) => {
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
-          <MdCategory />
+          <FaUserAlt /> {/* Profile Icon */}
           Profile
         </div>
       </NavLink>
@@ -29,7 +38,7 @@ const Navbar = ({ containerStyles }) => {
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
-          <MdShop2 />
+          <FaTasks /> {/* Tasks Icon */}
           Tasks
         </div>
       </NavLink>
@@ -38,7 +47,7 @@ const Navbar = ({ containerStyles }) => {
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
-          <MdContacts />
+          <FaBuilding /> {/* Company Icon */}
           Company
         </div>
       </NavLink>
@@ -47,7 +56,7 @@ const Navbar = ({ containerStyles }) => {
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
-          <MdContacts />
+          <FaSuitcase /> {/* Freelance Icon */}
           Freelancing
         </div>
       </NavLink>

@@ -112,7 +112,7 @@ const SharpenSkills = () => {
 
         {/* Call to Action Button */}
         <Link
-          to="/"
+          to="/courses"
           className="bg-white text-blue-600 hover:border-blue-500 font-bold py-4 px-10 rounded-full shadow-xl transition-all duration-300 hover:bg-gray-100 hover:shadow-2xl"
         >
           Start Learning Now
