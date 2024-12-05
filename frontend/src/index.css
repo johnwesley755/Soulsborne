@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+ font-family: "Source Sans 3", sans-serif;
 }
 .linearGradient {
   background: linear-gradient(180deg, #928df8 0%, #e1ffea22 60%);

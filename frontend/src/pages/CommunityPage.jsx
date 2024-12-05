@@ -388,19 +388,22 @@ const newsData = [
         </section>
 
         {/* Join the Community Call to Action */}
-        <section className="bg-violet-500 text-white py-12 mt-12 text-center rounded-lg">
-          <h2 className="text-3xl font-semibold mb-4">
-            Join Our Community Today
-          </h2>
-          <p className="mb-6">
-            Become a member and start collaborating with like-minded people!
-          </p>
-          <a
-            href="/signup"
-            className="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-all"
-          >
-            Sign Up Now
-          </a>
+        <section className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-12 mt-12 text-center rounded-lg shadow-lg">
+          <div className="max-w-3xl mx-auto px-6">
+            <h2 className="text-4xl font-extrabold mb-4">
+              Join Our Community Today
+            </h2>
+            <p className="text-lg md:text-xl text-gray-200 mb-8">
+              Become a member and start collaborating with like-minded people to
+              grow and achieve your goals!
+            </p>
+            <a
+              href="/signup"
+              className="inline-block bg-white text-indigo-600 font-semibold text-lg px-8 py-4 rounded-full shadow-md hover:bg-indigo-500 hover:text-white transition-all duration-300 transform hover:scale-105"
+            >
+              Sign Up Now
+            </a>
+          </div>
         </section>
       </div>
     </div>

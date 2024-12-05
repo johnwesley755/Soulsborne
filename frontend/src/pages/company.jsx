@@ -230,14 +230,14 @@ const companies = [
 
 const Company = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-r from-blue-600 to-purple-800 py-16 mt-20">
+    <section className="relative min-h-screen mt-20 bg-gradient-to-br from-indigo-900 to-purple-900 py-16">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-white">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-extrabold text-white drop-shadow-md">
             Explore Top Indian Companies
           </h1>
-          <p className="text-xl text-white mt-4">
+          <p className="text-2xl text-white mt-4 font-bold">
             Discover in-demand roles, required skills, and top companies in
             India
           </p>
@@ -248,32 +248,36 @@ const Company = () => {
           {companies.map((company) => (
             <motion.div
               key={company.id}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transform transition-all duration-300 hover:scale-105"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-between mb-6">
                 <img
                   src={company.image}
                   alt={company.name}
-                  className="w-16 h-16 object-contain"
+                  className="w-20 h-20 object-contain rounded-md border-2 border-gray-200"
                 />
-                <h2 className="text-xl font-semibold text-gray-800">
+                <h2 className="text-xl font-bold text-gray-800 text-right">
                   {company.name}
                 </h2>
               </div>
-              <p className="text-md text-gray-600 mb-4">
+              <p className="text-sm text-gray-600 mb-4">
                 {company.description}
               </p>
               <div className="mb-4">
-                <h3 className="text-lg font-bold text-gray-800">
+                <h3 className="text-lg font-extrabold text-purple-900">
                   In-demand Role: {company.role}
                 </h3>
-                <p className="text-sm text-gray-500">Skills Needed:</p>
-                <ul className="list-disc pl-6 text-gray-600">
+                <p className="text-sm text-gray-500 mt-1 font-medium">
+                  Skills Needed:
+                </p>
+                <ul className="list-disc pl-6 text-gray-700">
                   {company.skills.map((skill, index) => (
-                    <li key={index}>{skill}</li>
+                    <li key={index} className="font-medium">
+                      {skill}
+                    </li>
                   ))}
                 </ul>
               </div>
