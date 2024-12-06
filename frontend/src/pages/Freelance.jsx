@@ -15,7 +15,7 @@ const Freelance = () => {
         <JobSearchFilter />
 
     
-        <PostJobCTA />
+        <PostJobCTA />  
         <Testimonials />
         <FAQ />
         <Pagination />

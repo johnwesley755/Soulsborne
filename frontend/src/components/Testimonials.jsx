@@ -89,7 +89,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-lg shadow-lg w-80 h-60 flex-shrink-0 transform transition-transform hover:scale-105"
+              className="bg-white p-12 rounded-lg shadow-lg w-80 h-60 flex-shrink-0 transform transition-transform hover:scale-105"
             >
               <div className="flex flex-col items-center space-y-4">
                 <img

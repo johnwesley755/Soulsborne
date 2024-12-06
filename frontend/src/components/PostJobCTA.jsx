@@ -5,7 +5,7 @@ import exploreGigsImage from "../assets/hero-img.svg"; // Placeholder image for 
 
 const ExploreGigsCTA = () => {
   return (
-    <div className="bg-gradient-to-br from-indigo-600 to-blue-500 text-white py-12 px-6 rounded-lg shadow-lg mt-12">
+    <div className="bg-gradient-to-tl from-indigo-900 to-purple-900 text-white py-12 px-6 rounded-lg shadow-lg">
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Left Section: Image */}
         <div className="md:w-1/2">
