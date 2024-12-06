@@ -19,9 +19,11 @@ import BuyerPage from "./pages/BuyerPage";
 import SellerPage from "./pages/SellerPage";
 import StudentProfilePage from "./pages/StudentProfilePage";
 import GigDetailsPage from "./pages/GigDetailsPage";
+import StartupDetails from "./pages/StartupDetails";
 import { GigProvider } from "./context/GigContext";
 import { ProfileProvider } from "./context/ProfileContext";
 import CommunityPage from "./pages/CommunityPage";
+import StartupPage from "./pages/StartupPage";
 const App = () => {
   return (
     <Router>
@@ -38,10 +40,13 @@ const App = () => {
             <Route path="/tasks" element={<Tasks />} />
             <Route path="/company" element={<Company />} />
             <Route path="/courses" element={<Courses />} />
-            <Route path="/course/:id" element={<Course />} /> 
+            <Route path="/course/:id" element={<Course />} />
             <Route path="/freelance" element={<Freelance />} />
             <Route path="/jobpost" element={<JobPost />} />
+            <Route path="/startup" element={<StartupPage />} />
+            <Route path="/startup/:id" element={<StartupDetails />} />
 
+            {/* Added StartupDetail route */}
             {/* Routes for freelance-related pages */}
             <Route path="/buyer" element={<BuyerPage />} />
             <Route path="/seller" element={<SellerPage />} />

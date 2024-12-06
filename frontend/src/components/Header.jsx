@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdClose, MdMenu } from "react-icons/md";
-import { FaUserCircle, FaTasks, FaBriefcase, FaBuilding } from "react-icons/fa";
+import { FaUserCircle, FaTasks, FaHome, FaBriefcase, FaBuilding } from "react-icons/fa";
 import soulsborneImg from "../assets/soulsborne(1).png";
 
 const Header = () => {
@@ -34,6 +34,12 @@ const Header = () => {
         {/* Navbar for Desktop */}
         <nav className="hidden md:flex gap-x-8 xl:gap-x-12 text-lg items-center">
           <Link
+            to="/"
+            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+          >
+            <FaHome className="text-indigo-600" /> Home
+          </Link>
+          <Link
             to="/freelance"
             className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
           >
@@ -50,6 +56,12 @@ const Header = () => {
             className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
           >
             <FaBuilding className="text-indigo-600" /> Companies
+          </Link>
+          <Link
+            to="/startup"
+            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+          >
+            <FaBuilding className="text-indigo-600" /> Startup
           </Link>
         </nav>
 
