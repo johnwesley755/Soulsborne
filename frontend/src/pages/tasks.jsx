@@ -70,7 +70,7 @@ const TaskCard = ({ task, navigateToCourses }) => (
       <p className="text-xl mb-6 font-bold">{task.description}</p>
       <div className="w-full bg-gray-300 h-6 rounded-full overflow-hidden mb-4">
         <div
-          className="bg-gradient-to-r from-green-400 to-blue-500 h-full"
+          className="bg-gradient-to-r from-blue-500 to-purple-600 h-full"
           style={{ width: `${task.progress}%` }}
         ></div>
       </div>
