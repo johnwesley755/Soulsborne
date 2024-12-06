@@ -77,7 +77,7 @@ const HeroFreelance = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-700 mt-20 text-white min-h-screen mb-20">
+    <div className="bg-gradient-to-tl from-indigo-900 to-purple-900 mt-20 text-white min-h-screen">
       {/* Hero Header */}
       <div className="container mx-auto px-6 py-16 text-center">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-6">

@@ -3,7 +3,7 @@ import uniqueFeatureImage from "../assets/student-progress.svg"; // Ensure you h
 
 const WhyChooseUs = () => {
   return (
-    <div className="p-10 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 text-white rounded-lg shadow-lg">
+    <div className="p-10 bg-gradient-to-tr from-purple-900 to-indigo-900 text-white rounded-lg shadow-lg">
       {/* Section Title */}
       <div className="text-center mb-12">
         <h1 className="text-5xl font-extrabold mb-4">Why Choose Us?</h1>
