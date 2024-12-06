@@ -44,7 +44,7 @@ const HeroSection = () => {
           your adventure starts here.
         </p>
         <NavLink
-          to="/buyer"
+          to="/freelance  "
           className="px-4 py-2 sm:px-6 sm:py-3 bg-violet-500 hover:bg-yellow-500 rounded-lg text-sm sm:text-base font-semibold shadow-md transition-transform transform hover:scale-105"
         >
           Get Started
