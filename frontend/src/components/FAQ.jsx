@@ -32,7 +32,7 @@ const FAQ = () => {
     },
   ];
 
-  return (
+  return (  
     <div className="py-16">
       <div className="max-w-screen-lg mx-auto  text-center mb-12">
         <h2 className="text-4xl font-bold  text-gray-800 mb-4">
