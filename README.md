@@ -7,7 +7,7 @@ Soulsborne is a cutting-edge platform that empowers individuals to conquer procr
 ## 🚀 **Live Demo**  
 
 🎉 Check out the deployed version of **Soulsborne** here:  
-[**Soulsborne - Master Your Path to Greatness**](https://soulsborne-bba5f.web.app) 🌐
+[**Soulsborne - Master Your Path to Greatness**](https://soulsborne-261a4.web.app/) 🌐
 
 ---
 
@@ -112,14 +112,17 @@ Here are the essential dependencies used in **Soulsborne**, ensuring a smooth an
 
 ```json
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+   "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "firebase": "^11.0.2",
     "flag-icon-css": "^4.1.7",
     "framer-motion": "^11.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0",
     "react-phone-input-2": "^2.15.1",
+    "react-router-dom": "^7.0.2",
     "react-select": "^5.8.1",
     "react-select-country-list": "^2.2.3",
     "react-slick": "^0.30.2",
