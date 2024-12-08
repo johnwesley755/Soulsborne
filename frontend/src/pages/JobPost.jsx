@@ -32,7 +32,7 @@ const JobPost = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-violet-500 to-indigo-600 min-h-screen flex justify-center items-center">
+    <div className="bg-gradient-to-tl from-purple-900 to-indigo-900 min-h-screen flex justify-center items-center">
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
         <h1 className="text-2xl font-bold text-center mb-6">Post a Job</h1>
         <form onSubmit={handleSubmit} className="space-y-4">

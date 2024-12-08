@@ -39,7 +39,7 @@ const ExploreGigsCTA = () => {
               Explore Gigs
             </NavLink>
             <NavLink
-              to="/join-us"
+              to="/jobpost"
               className="px-8 py-4 bg-transparent border border-white font-semibold rounded-lg shadow-md hover:bg-white hover:text-indigo-600 transition duration-200"
             >
               Join as Freelancer

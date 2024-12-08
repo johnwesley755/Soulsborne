@@ -32,7 +32,7 @@ const HeroSection = () => {
       {/* Content Section */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 md:px-8 text-center text-white">
         {/* Headline and Description */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 px-2">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-sm:mt-20 font-extrabold leading-tight mb-6 px-2">
           Unlock Your <span className="text-yellow-400">Potential</span> with
           Creativity
         </h1>

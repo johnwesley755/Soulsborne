@@ -34,7 +34,7 @@ const StartupDetails = () => {
           <div className="status bg-green-600 text-white font-semibold px-6 py-2 rounded-full inline-block mb-4">
             ACTIVE
           </div>
-          <p className="text-lg text-gray-700 mb-4">{startup.description}</p>
+          <p className="text-lg text-gray-700 font-bold mb-4">{startup.description}</p>
           <div className="social-links mt-6 flex justify-center lg:justify-start">
             <a
               href={`https://www.linkedin.com/in/${startup.founder.linkedin}`}
@@ -71,10 +71,10 @@ const StartupDetails = () => {
             alt={startup.founder.name}
             className="rounded-full w-40 h-40 object-cover mx-auto lg:mx-0 border-4 border-gray-300"
           />
-          <h3 className="mt-4 text-xl font-semibold text-gray-800">
+          <h3 className="mt-4 text-xl font-bold text-gray-800">
             {startup.founder.name}
           </h3>
-          <p className="text-lg text-gray-600">{startup.founder.position}</p>
+          <p className="text-lg font-bold text-gray-600">{startup.founder.position}</p>
         </div>
       </div>
 
@@ -89,12 +89,12 @@ const StartupDetails = () => {
               style={{ maxWidth: "350px" }} // Reduce width of cards
             >
               <div className="reviewer-info flex justify-between items-center mb-4">
-                <p className="font-semibold text-lg text-gray-800">
+                <p className="font-bold text-lg text-gray-800">
                   {review.reviewer}
                 </p>
-                <p className="text-sm text-gray-500">{review.date}</p>
+                <p className="text-sm font-bold text-gray-500">{review.date}</p>
               </div>
-              <p className="text-gray-700">{review.text}</p>
+              <p className="text-gray-700 font-bold">{review.text}</p>
             </div>
           ))}
         </div>
@@ -102,7 +102,7 @@ const StartupDetails = () => {
 
       {/* Contact Section */}
       <div className="contact text-center">
-        <button className="bg-gradient-to-r from-indigo-900 to-purple-900 py-3 px-12 rounded-full text-lg font-semibold text-white hover:bg-blue-500 transition duration-300 transform hover:scale-105">
+        <button className="bg-gradient-to-r from-indigo-900 to-purple-900 py-3 px-12 rounded-full text-lg font-bold text-white hover:bg-blue-500 transition duration-300 transform hover:scale-105">
           Contact the Founder
         </button>
       </div>

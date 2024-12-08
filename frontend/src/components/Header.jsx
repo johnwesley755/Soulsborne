@@ -32,7 +32,7 @@ const Header = () => {
         </div>
 
         {/* Navbar for Desktop */}
-        <nav className="hidden md:flex gap-x-8 xl:gap-x-12 text-lg items-center">
+        <nav className="hidden md:flex font-bold gap-x-8 xl:gap-x-12 text-lg items-center">
           <Link
             to="/"
             className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
@@ -114,6 +114,12 @@ const Header = () => {
       >
         <nav className="flex flex-col gap-y-6">
           <Link
+            to="/"
+            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+          >
+            <FaHome className="text-indigo-600" /> Home
+          </Link>
+          <Link
             to="/freelance"
             className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
           >
@@ -130,6 +136,12 @@ const Header = () => {
             className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
           >
             <FaBuilding className="text-indigo-600" /> Companies
+          </Link>
+          <Link
+            to="/startup"
+            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+          >
+            <FaBuilding className="text-indigo-600" /> Startup
           </Link>
         </nav>
 
