@@ -1,78 +1,72 @@
 # ⚔️ **Soulsborne - Master Your Path to Greatness** ⚔️  
 
-**Soulsborne** is a cutting-edge platform that empowers individuals to **conquer procrastination**, **sharpen their skills**, and **excel in their personal and professional journeys**.  
-
-Inspired by the grueling yet rewarding experience of Soulsborne games, this platform helps you face challenges, break through barriers, and **emerge victorious in life!** 🎮🔥  
+Soulsborne is a cutting-edge platform that empowers individuals to conquer procrastination, sharpen their skills, and excel in their personal and professional journeys. Inspired by the grueling yet rewarding experience of Soulsborne games, this platform helps you face challenges, break through barriers, and emerge victorious in life! 🎮🔥  
 
 ---
 
 ## 🚀 **Live Demo**  
 
-🎉 **Experience the live action** of **Soulsborne** here:  
-[**Soulsborne - Master Your Path to Greatness**](https://soulsborne-261a4.web.app/) 🌐  
+🎉 Check out the deployed version of **Soulsborne** here:  
+[🌐 **Soulsborne - Master Your Path to Greatness**](https://soulsborne-261a4.web.app/)  
 
 ---
 
 ## ✨ **Key Features**  
 
-🌟 **Soulsborne** is your go-to platform for achieving success through focus, skill-building, and community.  
-
-Here’s what makes it **stand out**:  
+**Soulsborne** is your go-to platform for achieving success through focus, skill-building, and community. Here’s what makes it stand out:  
 
 - 🎯 **Focus & Kill Procrastination**: Cut down procrastination like a boss with powerful productivity hacks and time-management techniques.  
 - ⚔️ **Sharpen Your Skills**: Hone your skills and master various domains with our interactive skill-building quests.  
 - 🎓 **Get Placed & Succeed**: Land your dream job with career guidance and resources tailored to your growth.  
-- 💬 **Connect & Collaborate**: Forge new connections with like-minded individuals, exchange ideas, and grow together in this thriving community.  
-- 🚀 **Stay Updated with Trends**: Never miss out on the latest tools, courses, and updates in your industry to stay competitive and informed!  
+- 💬 **Connect & Collaborate**: Forge new connections with like-minded people, exchange ideas, and grow together in this thriving community.  
+- 🚀 **Stay Updated with Trends**: Never miss out on the latest tools, courses, and updates in your industry to keep you competitive and informed!
+- 🤖 **Chatbot Assistance:** A smart assistant is now available in the Profile section to provide tips, guidance, and instant support!
 
 ---
 
-## 🎥 **Working Demo Video**  
+## 🎨 **Mockups & Screenshots**  
 
-👉 [**Click here to watch the demo video**](frontend/src/assets/video.mp4) 🎬✨ *(Video link coming soon!)*  
+Here’s a sneak peek into **Soulsborne**'s sleek design and functionality:  
 
----
+### 🔮 **Landing Page Mockup**  
+Showcasing the essence of conquering procrastination and self-growth.  
 
-## 🎨 **Mockups**  
+![Hero Section](frontend/src/assets/screenshot-1.png)  
 
-Take a sneak peek into **Soulsborne**'s sleek design:  
+### 🎯 **Skills**  
+Track your progress, master your skills, and achieve greatness.  
 
-- **🔮 Landing Page Mockup**: Captures the essence of conquering procrastination and self-growth.  
-- **🎨 User Dashboard Mockup**: The heart of Soulsborne, tracking progress, skills, and achievements.
+![Skills Section](frontend/src/assets/screenshot-5.png)  
 
-*Mockups will be shared soon! Stay tuned!* 🚀✨  
+### 🤖 **Chatbot Assistance**  
+A smart assistant is now available in the Profile section to provide tips, guidance, and instant support!  
 
----
+![Skills Section](frontend/src/assets/screenshot-4.png)  
 
-## 🛠️ **Tech Stack**  
+### 📋 **Tasks Overview**  
+Organize your to-dos with ease and stay on track.  
 
-Here’s the powerful tech stack that brings **Soulsborne** to life:  
+![Tasks Section](frontend/src/assets/screenshot-3.png)  
 
-| Tech        | Icon 🌟 |  
-|-------------|---------|  
-| **React**   | ⚛️      |  
-| **Tailwind CSS** | 💅 |  
-| **Firebase** | 🔥     |  
-| **Framer Motion** | 🎞️ |  
-| **Slick Carousel** | 🎡 |  
-| **FontAwesome** | 🎨 |  
+### 🚀 **Startup Guidance**  
+Get inspired to launch your career with tailored resources.  
+
+![Startup Section](frontend/src/assets/screenshot-2.png)  
 
 ---
 
 ## 📂 **Project Folder Structure**  
 
-We’ve organized the **Soulsborne** project for **ease of navigation**.  
+We’ve organized the **Soulsborne** project for ease of use and navigation:  
 
-```plaintext
+```bash
 Soulsborne/
-│
-├── public/                      # Public files such as index.html and favicon
-│   └── index.html                # The main HTML file that loads the app
-│
-├── src/                          # All source code for the application
-│   ├── assets/                   # SVGs, illustrations, and other media assets
-│   ├── components/               # Modular components for reuse across the app
-│   │   ├── BuildCompetitiveness.jsx   
+├── public/                      
+│   └── index.html                
+├── src/                          
+│   ├── assets/                   
+│   ├── components/               
+│   │   ├── BuildCompetitiveness.jsx  
 │   │   ├── Connect.jsx                
 │   │   ├── FocusAndKillProcrastination.jsx  
 │   │   ├── Footer.jsx                 
@@ -83,14 +77,38 @@ Soulsborne/
 │   │   ├── SharpenSkills.jsx          
 │   │   ├── Slider.jsx                 
 │   │   └── StayUpdated.jsx            
-│   ...
+│   ├── pages/                    
+│   │   ├── ForgotPassword.jsx     
+│   │   ├── Home.jsx               
+│   │   ├── Login.jsx              
+│   │   ├── Profile.jsx            
+│   │   ├── Signup.jsx             
+│   │   └── Tasks.jsx
+│   └── Company.jsx 
+├── App.jsx                        
+├── tailwind.config.js             
+├── vite.config.js                 
+└── package.json                   
 ```
+
+---
+
+## 💻 **Tech Stack**  
+
+Here’s the powerful tech stack behind **Soulsborne**:  
+
+- ⚛️ **React**: For building an interactive UI.  
+- 💅 **Tailwind CSS**: Utility-first CSS for responsive designs.  
+- 🎡 **Slick Carousel**: For smooth sliders.  
+- 🎨 **FontAwesome**: Beautiful icons for enhanced visuals.  
+- 🔥 **Firebase**: Real-time database and authentication.  
+- 🖼️ **Framer Motion**: Elegant animations to bring the app to life.  
 
 ---
 
 ## 🚀 **Quick Start Guide**  
 
-**Get started** with **Soulsborne** in a few simple steps:  
+Ready to dive into **Soulsborne**?  
 
 1. **Clone the repository**:  
    ```bash
@@ -109,19 +127,17 @@ Soulsborne/
    npm start
    ```  
 5. **Open the app in your browser**:  
-   ```
-   http://localhost:5173
-   ```  
+   [http://localhost:5173](http://localhost:5173)  
 
 ---
 
 ## 🏅 **Achievements & Ranking System**  
 
-Unlock **achievements** and **rank up** as you progress:  
+Unlock achievements and level up:  
 
-- 🥉 **Bronze Achiever**: First steps toward productivity.  
+- 🎖️ **Bronze Achiever**: First steps toward productivity.  
 - 🥈 **Silver Slayer**: Excelling in skill-building.  
-- 🥇 **Golden Champion**: Complete mastery of procrastination and beyond!  
+- 🥇 **Golden Champion**: Complete mastery over procrastination.  
 
 ---
 
@@ -129,12 +145,10 @@ Unlock **achievements** and **rank up** as you progress:
 
 Have feedback or ideas? Let’s chat!  
 
-- **Email**: [support@soulsborne.com](mailto:support@soulsborne.com) 📧  
-- **Twitter**: [@SoulsborneOfficial](https://twitter.com/soulsborneofficial) 🐦  
-- **LinkedIn**: [Soulsborne](https://www.linkedin.com/company/soulsborne) 💼  
+- **📧 Email**: support@soulsborne.com  
+- **🐦 Twitter**: [@SoulsborneOfficial](https://twitter.com/soulsborneofficial)  
+- **💼 LinkedIn**: [Soulsborne](https://www.linkedin.com/company/soulsborne)  
 
 ---
 
-Made with **passion** 🖤 and **dedication** 👾 by the **Soulsborne Team**.  
-
-🎮 **Level up your life today!** 💥
+Made with passion by the **Soulsborne Team**. 🖤👾  
