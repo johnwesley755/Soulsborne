@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { MdClose, MdMenu } from "react-icons/md";
 import {
@@ -16,6 +16,24 @@ const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false); // State to manage mobile menu toggle
   const [isLoggedIn, setIsLoggedIn] = useState(true); // State to manage login status
   const [profileMenuOpened, setProfileMenuOpened] = useState(false); // Profile dropdown state
+  const [showHeader, setShowHeader] = useState(true); // State to manage header visibility
+  let lastScroll = 0;
+
+  // Scroll listener to hide/show header
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        setShowHeader(false); // Hide header on scroll down
+      } else {
+        setShowHeader(true); // Show header on scroll up
+      }
+      lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Toggle menu function
   const toggleMenu = () => setMenuOpened(!menuOpened);
@@ -30,7 +48,11 @@ const Header = () => {
   const toggleProfileMenu = () => setProfileMenuOpened(!profileMenuOpened);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-20 bg-white shadow-lg font-semibold text-gray-800">
+    <header
+      className={`fixed top-0 left-0 w-full z-20 bg-white shadow-lg font-semibold text-gray-800 transition-transform duration-300 ${
+        showHeader ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="flex justify-between items-center py-4 px-6 lg:px-12">
         {/* Logo */}
         <div className="flex-shrink-0 ml-4">

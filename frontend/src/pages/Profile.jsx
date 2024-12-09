@@ -143,7 +143,7 @@ const Profile = () => {
     <div className="mt-20 flex items-center justify-center bg-gradient-to-b from-indigo-900 to-purple-900 py-12">
       {/* Profile Container */}
       <motion.div
-        className="bg-white max-md:bg-gradient-to-b from-indigo-900 to-purple-900 shadow-lg rounded-lg flex flex-col md:flex-row w-full max-w-6xl lg:p-16 p-10 relative"
+        className="bg-white max-md:bg-gradient-to-b from-indigo-900 to-purple-900 max-md:shadow-none shadow-lg rounded-lg flex flex-col md:flex-row w-full max-w-6xl lg:p-16 p-10 relative"
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
@@ -171,9 +171,9 @@ const Profile = () => {
         </div>
 
         {/* Right Side: Form */}
-        <motion.div className="w-full md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <motion.div className="w-full md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6 font-semibold">
           {/* Profile Image Upload */}
-          <div className="col-span-full text-center mb-6">
+          <div className="col-span-full text-center mb-6 font-bold">
             <label className="block text-gray-600 mb-2 max-md:text-gray-100">
               Profile Photo
             </label>
