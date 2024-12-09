@@ -84,7 +84,7 @@ const FocusAndKillProcrastination = () => {
       {/* Call to Action */}
       <div className="flex justify-center mt-16">
         <Link
-          to="/"
+          to="/signup"
           className="bg-white text-purple-600 hover:border-purple-500 font-bold py-4 px-10 rounded-full shadow-xl transition-all duration-300 hover:bg-gray-100 hover:shadow-2xl"
         >
           Get Started Now

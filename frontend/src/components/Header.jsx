@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdClose, MdMenu } from "react-icons/md";
-import { FaUserCircle, FaTasks, FaHome, FaBriefcase, FaBuilding } from "react-icons/fa";
+import {
+  FaUserCircle,
+  FaTasks,
+  FaHome,
+  FaBriefcase,
+  FaBuilding,
+  FaSignOutAlt,
+  FaUserEdit,
+} from "react-icons/fa";
 import soulsborneImg from "../assets/soulsborne(1).png";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false); // State to manage mobile menu toggle
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to manage login status
+  const [isLoggedIn, setIsLoggedIn] = useState(true); // State to manage login status
+  const [profileMenuOpened, setProfileMenuOpened] = useState(false); // Profile dropdown state
 
   // Toggle menu function
   const toggleMenu = () => setMenuOpened(!menuOpened);
@@ -16,6 +25,9 @@ const Header = () => {
     setIsLoggedIn(false);
     // Add logout logic (e.g., clearing session storage, token removal)
   };
+
+  // Toggle profile menu function
+  const toggleProfileMenu = () => setProfileMenuOpened(!profileMenuOpened);
 
   return (
     <header className="fixed top-0 left-0 w-full z-20 bg-white shadow-lg font-semibold text-gray-800">
@@ -65,27 +77,31 @@ const Header = () => {
           </Link>
         </nav>
 
-        {/* Mobile Menu Toggle */}
-        <div className="flex items-center md:hidden">
-          {!menuOpened ? (
-            <MdMenu
-              className="cursor-pointer text-3xl text-gray-700 hover:text-indigo-600 transition duration-300"
-              onClick={toggleMenu}
-            />
-          ) : (
-            <MdClose
-              className="cursor-pointer text-3xl text-gray-700 hover:text-indigo-600 transition duration-300"
-              onClick={toggleMenu}
-            />
-          )}
-        </div>
-
         {/* User Section for Desktop */}
-        <div className="hidden md:flex items-center gap-x-6">
+        <div className="hidden md:flex items-center gap-x-6 relative">
           {isLoggedIn ? (
-            <Link to="/profile">
-              <FaUserCircle className="text-3xl cursor-pointer text-gray-700 hover:text-indigo-600 transition duration-300" />
-            </Link>
+            <div className="relative">
+              <FaUserCircle
+                className="text-3xl cursor-pointer text-gray-700 hover:text-indigo-600 transition duration-300"
+                onClick={toggleProfileMenu}
+              />
+              {profileMenuOpened && (
+                <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-md p-4 w-40">
+                  <Link
+                    to="/profile"
+                    className="flex items-center gap-2 p-2 hover:bg-gray-100 transition duration-300 rounded-md"
+                  >
+                    <FaUserEdit /> Profile
+                  </Link>
+                  <button
+                    onClick={handleLogout}
+                    className="flex items-center gap-2 p-2 text-red-600 hover:bg-gray-100 transition duration-300 rounded-md w-full"
+                  >
+                    <FaSignOutAlt /> Logout
+                  </button>
+                </div>
+              )}
+            </div>
           ) : (
             <>
               <Link
@@ -100,6 +116,21 @@ const Header = () => {
                 </button>
               </Link>
             </>
+          )}
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <div className="flex items-center md:hidden">
+          {!menuOpened ? (
+            <MdMenu
+              className="cursor-pointer text-3xl text-gray-700 hover:text-indigo-600 transition duration-300"
+              onClick={toggleMenu}
+            />
+          ) : (
+            <MdClose
+              className="cursor-pointer text-3xl text-gray-700 hover:text-indigo-600 transition duration-300"
+              onClick={toggleMenu}
+            />
           )}
         </div>
       </div>
@@ -148,12 +179,20 @@ const Header = () => {
         {/* Mobile User Section */}
         <div className="flex flex-col gap-y-4 mt-6">
           {isLoggedIn ? (
-            <Link
-              to="/profile"
-              className="flex items-center gap-2 text-center p-3 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition duration-300"
-            >
-              <FaUserCircle className="text-xl" /> Profile
-            </Link>
+            <>
+              <Link
+                to="/profile"
+                className="text-center p-3 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition duration-300"
+              >
+                Profile
+              </Link>
+              <button
+                onClick={handleLogout}
+                className="text-center p-3 text-white bg-red-600 rounded-md hover:bg-red-700 transition duration-300"
+              >
+                Logout
+              </button>
+            </>
           ) : (
             <>
               <Link

@@ -91,7 +91,7 @@ const GetPlaced = () => {
 
         {/* Call to Action Button */}
         <NavLink
-          to="/apply"
+          to="/company"
           className="bg-white text-purple-600 hover:border-purple-500 font-bold py-4 px-10 rounded-full shadow-xl transition-all duration-300 hover:bg-gray-100 hover:shadow-2xl"
         >
           Apply Now for Your Dream Job

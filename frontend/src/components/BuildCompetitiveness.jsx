@@ -118,7 +118,7 @@ const BuildCompetitiveness = () => {
             a world full of opportunities.
           </p>
           <Link
-            to="/"
+            to="/signup"
             className="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 hover:bg-indigo-700"
           >
             Get Started Now
