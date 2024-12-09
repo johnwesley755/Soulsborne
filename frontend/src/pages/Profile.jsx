@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Select from "react-select";
-import illustrationImage from "../assets/illustration-image.svg"; // Your illustration image
+import illustrationImage from "../assets/hero-img.svg"; // Your illustration image
 import countries from "react-select-country-list"; // Import country list
 import { FaRobot } from "react-icons/fa";
 
