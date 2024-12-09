@@ -6,7 +6,7 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
-import logo from "../assets/soulsborne.png"; // Replace with the actual path to your logo file
+import logo from "../assets/soulsborne(1).png"; // Replace with the actual path to your logo file
   
 const Footer = () => {
   return (
