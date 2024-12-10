@@ -4,7 +4,7 @@ const teamMembers = [
     role: "Mentor",
     image:
       "https://media.licdn.com/dms/image/v2/D5603AQFXzrEy44VPOA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1669008829535?e=1739404800&v=beta&t=k3HozLB95_zm_RyF8nqQzJSKsBZkjOaQutjfdtVYh0w",
-    bio: "Dr. Carter provides invaluable guidance and mentorship, leveraging her years of experience in technology.",
+    bio: "Dr. Priscilla provides invaluable guidance and mentorship, leveraging her years of experience in technology.",
     email: "prisci.christa@gmail.com",
     skills: ["Mentorship", "Strategy", "Public Speaking"],
   },
@@ -12,9 +12,9 @@ const teamMembers = [
     name: "Santhosh",
     role: "Project Management",
     image: "/src/assets/santhosh-2.jpeg",
-    bio: "Jane is a passionate frontend developer with a knack for creating visually appealing and user-friendly interfaces.",
-    email: "jane.doe@example.com",
-    skills: ["HTML", "CSS", "JavaScript", "React"],
+    bio: "Santhosh excel at planning, organizing, and coordinating resources to ensure projects are delivered successfully within scope, time, and budget.",
+    email: "santhosh200@gmail.com",
+    skills: ["Agile Management", "Scrum", "Leadership"],
   },
   {
     name: "Krithik Srinivas",
@@ -28,27 +28,28 @@ const teamMembers = [
     name: "Raghul Chandramouli",
     role: "Cloud Architect",
     image: "/src/assets/raghul.jpg",
-    bio: "",
-    email: "alice.johnson@example.com",
-    skills: ["Agile Management", "Scrum", "Leadership"],
+    bio: " I design and implement scalable, secure, and cost-efficient cloud infrastructure to meet organizational goals.",
+    email: "raghulchandramouli@gmail.com",
+    skills: ["Networking", "System Design", "Databases"],
   },
-  {
+{
     name: "Darshana Kiruthika",
-    role: "DevOps Engineer",
-    image:
-      "/src/assets/darshana.jpeg",
-    bio: "Michael bridges the gap between development and operations, optimizing CI/CD pipelines.",
-    email: "michael.brown@example.com",
-    skills: ["AWS", "Docker", "Kubernetes", "CI/CD"],
-  },
-  {
+    role: "Front-End Developer",
+    image: "/src/assets/darshana.jpeg",
+    bio: "Darshana crafts interactive and visually appealing web interfaces, focusing on user-centric designs and responsive layouts.",
+    email: "darshana.kiruthika@example.com",
+    skills: ["React", "Tailwind CSS", "JavaScript", "UI/UX Design"],
+},
+
+{
     name: "Abina Sri",
-    role: "QA Engineer",
+    role: "Market Research Analyst",
     image: "/src/assets/abinasri.jpeg",
-    bio: "Sophia ensures the delivery of high-quality products through rigorous testing and debugging.",
-    email: "sophia.davis@example.com",
-    skills: ["Manual Testing", "Automation", "Selenium"],
-  },
+    bio: "Abina uncovers market trends and consumer insights, driving strategic decisions through data analysis and competitive research.",
+    email: "abina.sri@example.com",
+    skills: ["Data Analysis", "Market Trends", "Competitive Research", "Survey Design"],
+},
+
   {
     name: "Harshini",
     role: "UI/UX Designer",
