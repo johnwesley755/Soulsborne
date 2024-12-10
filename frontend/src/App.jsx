@@ -18,46 +18,62 @@ import BuyerPage from "./pages/BuyerPage";
 import SellerPage from "./pages/SellerPage";
 import StudentProfilePage from "./pages/StudentProfilePage";
 import GigDetailsPage from "./pages/GigDetailsPage";
+import { AuthProvider } from "./context/AuthContext";
 import StartupDetails from "./pages/StartupDetails";
 import { GigProvider } from "./context/GigContext";
 import { ProfileProvider } from "./context/ProfileContext";
 import CommunityPage from "./pages/CommunityPage";
 import StartupPage from "./pages/StartupPage";
 import About from "./pages/About";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const App = () => {
   return (
     <Router>
-      <GigProvider>
-        <ProfileProvider>
-          <Header />
-          <Routes>
-            {/* Routes for general pages */}
-            <Route path="/" element={<Home />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/forgotpassword" element={<ForgotPassword />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/tasks" element={<Tasks />} />
-            <Route path="/company" element={<Company />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/course/:id" element={<Course />} />
-            <Route path="/freelance" element={<Freelance />} />
-            <Route path="/jobpost" element={<JobPost />} />
-            <Route path="/startup" element={<StartupPage />} />
-            <Route path="/startup/:id" element={<StartupDetails />} />
-            <Route path='/about' element={<About />} />
+      <AuthProvider>
+        <GigProvider>
+          <ProfileProvider>
+            <Header />
+            <Routes>
+              {/* Routes for general pages */}
+              <Route path="/" element={<Home />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/forgotpassword" element={<ForgotPassword />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/tasks" element={<Tasks />} />
+              <Route path="/company" element={<Company />} />
+              <Route path="/courses" element={<Courses />} />
+              <Route path="/course/:id" element={<Course />} />
+              <Route path="/freelance" element={<Freelance />} />
+              <Route path="/jobpost" element={<JobPost />} />
+              <Route path="/startup" element={<StartupPage />} />
+              <Route path="/startup/:id" element={<StartupDetails />} />
+              <Route path="/about" element={<About />} />
 
-            {/* Added StartupDetail route */}
-            {/* Routes for freelance-related pages */}
-            <Route path="/buyer" element={<BuyerPage />} />
-            <Route path="/seller" element={<SellerPage />} />
-            <Route path="/student-profile" element={<StudentProfilePage />} />
-            <Route path="/gig/:id" element={<GigDetailsPage />} />
-            <Route path="/community" element={<CommunityPage />} />
-          </Routes>
-          <Footer />
-        </ProfileProvider>
-      </GigProvider>
+              {/* Added StartupDetail route */}
+              {/* Routes for freelance-related pages */}
+              <Route path="/buyer" element={<BuyerPage />} />
+              <Route path="/seller" element={<SellerPage />} />
+              <Route path="/student-profile" element={<StudentProfilePage />} />
+              <Route path="/gig/:id" element={<GigDetailsPage />} />
+              <Route path="/community" element={<CommunityPage />} />
+            </Routes>
+            <Footer />
+          </ProfileProvider>
+        </GigProvider>
+        <ToastContainer // Toast notifications for user feedback
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+      </AuthProvider>
     </Router>
   );
 };

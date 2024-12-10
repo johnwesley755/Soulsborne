@@ -1,32 +1,26 @@
+// src/pages/SignupForm.jsx
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
-const Signup = () => {
-  const [name, setName] = useState("");
+import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
+import { useAuth } from "../context/AuthContext"; // Import the AuthContext for authentication
+import { toast } from "react-toastify"; // For displaying toast notifications
+import { motion } from "framer-motion"; // Import framer-motion for animations
+import { Link } from "react-router-dom";
+const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  const { signup } = useAuth(); // Access the signup function from AuthContext
+  const navigate = useNavigate(); // Create a navigate instance
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!name || !email || !password) {
-      toast.error("All fields are required!", {
-        position: toast.POSITION.TOP_CENTER,
-      });
-      return;
+    try {
+      await signup(email, password); // Call the signup function with email and password
+      toast.success("Account created successfully!"); // Show success toast
+      navigate("/"); // Navigate to the home page after successful signup
+    } catch (error) {
+      toast.error(error.message); // Show error message in toast
     }
-
-    // Mock backend authentication logic
-    setTimeout(() => {
-      toast.success("Account created successfully!", {
-        position: toast.POSITION.TOP_CENTER,
-      });
-      // Redirect to home page after signup
-      navigate("/");
-    }, 1000); // Simulate a server delay
   };
 
   return (
@@ -64,16 +58,7 @@ const Signup = () => {
             adventures await. Create an account and begin your journey today!
           </p>
           <form className="space-y-6" onSubmit={handleSubmit}>
-            <div>
-              <label className="block text-gray-600 mb-2 font-bold">Name</label>
-              <input
-                type="text"
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </div>
+          
             <div>
               <label className="block text-gray-600 mb-2 font-bold">
                 Email
@@ -120,4 +105,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignupForm;
