@@ -10,7 +10,7 @@ import {
   FaSignOutAlt,
   FaUserEdit,
 } from "react-icons/fa";
-import soulsborneImg from "../assets/soulsborne(1).png";
+import soulsborneImg from "../assets/soulsborne-logo.svg";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false); // State to manage mobile menu toggle
@@ -69,33 +69,33 @@ const Header = () => {
         <nav className="hidden md:flex font-bold gap-x-8 xl:gap-x-12 text-lg items-center">
           <Link
             to="/"
-            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+            className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
           >
-            <FaHome className="text-indigo-600" /> Home
+            <FaHome className="text-blue-800" /> Home
           </Link>
           <Link
             to="/freelance"
-            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+            className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
           >
-            <FaBriefcase className="text-indigo-600" /> Freelancing
+            <FaBriefcase className="text-blue-800" /> Freelancing
           </Link>
           <Link
             to="/tasks"
-            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+            className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
           >
-            <FaTasks className="text-indigo-600" /> Tasks
+            <FaTasks className="text-blue-800" /> Tasks
           </Link>
           <Link
             to="/company"
-            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+            className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
           >
-            <FaBuilding className="text-indigo-600" /> Companies
+            <FaBuilding className="text-blue-800" /> Companies
           </Link>
           <Link
             to="/startup"
-            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+            className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
           >
-            <FaBuilding className="text-indigo-600" /> Startup
+            <FaBuilding className="text-blue-800" /> Startup
           </Link>
         </nav>
 
@@ -104,7 +104,7 @@ const Header = () => {
           {isLoggedIn ? (
             <div className="relative">
               <FaUserCircle
-                className="text-3xl cursor-pointer text-gray-700 hover:text-indigo-600 transition duration-300"
+                className="text-3xl cursor-pointer text-gray-700 hover:text-blue-800 transition duration-300"
                 onClick={toggleProfileMenu}
               />
               {profileMenuOpened && (
@@ -114,6 +114,12 @@ const Header = () => {
                     className="flex items-center gap-2 p-2 hover:bg-gray-100 transition duration-300 rounded-md"
                   >
                     <FaUserEdit /> Profile
+                  </Link>
+                  <Link
+                    to="/about"
+                    className="flex items-center gap-2 p-2 hover:bg-gray-100 transition duration-300 rounded-md"
+                  >
+                    <FaUserEdit /> About Us
                   </Link>
                   <button
                     onClick={handleLogout}
@@ -128,12 +134,12 @@ const Header = () => {
             <>
               <Link
                 to="/signup"
-                className="px-4 py-2 text-indigo-600 border border-indigo-600 rounded-md hover:bg-indigo-600 hover:text-white transition duration-300"
+                className="px-4 py-2 text-blue-800 border border-blue-800 rounded-md hover:bg-blue-800 hover:text-white transition duration-300"
               >
                 Sign Up
               </Link>
               <Link to="/login">
-                <button className="px-4 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition duration-300">
+                <button className="px-4 py-2 text-white bg-blue-800 rounded-md hover:bg-blue-800 transition duration-300">
                   Login
                 </button>
               </Link>
@@ -145,12 +151,12 @@ const Header = () => {
         <div className="flex items-center md:hidden">
           {!menuOpened ? (
             <MdMenu
-              className="cursor-pointer text-3xl text-gray-700 hover:text-indigo-600 transition duration-300"
+              className="cursor-pointer text-3xl text-gray-700 hover:text-blue-800 transition duration-300"
               onClick={toggleMenu}
             />
           ) : (
             <MdClose
-              className="cursor-pointer text-3xl text-gray-700 hover:text-indigo-600 transition duration-300"
+              className="cursor-pointer text-3xl text-gray-700 hover:text-blue-800 transition duration-300"
               onClick={toggleMenu}
             />
           )}
@@ -168,33 +174,33 @@ const Header = () => {
         <nav className="flex flex-col gap-y-6">
           <Link
             to="/"
-            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+            className="flex items-center gap-2 hover:-blue-800 transition duration-300"
           >
-            <FaHome className="text-indigo-600" /> Home
+            <FaHome className="text-blue-800" /> Home
           </Link>
           <Link
             to="/freelance"
-            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+            className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
           >
-            <FaBriefcase className="text-indigo-600" /> Freelancing
+            <FaBriefcase className="text-blue-800" /> Freelancing
           </Link>
           <Link
             to="/tasks"
-            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+            className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
           >
-            <FaTasks className="text-indigo-600" /> Tasks
+            <FaTasks className="text-blue-800" /> Tasks
           </Link>
           <Link
             to="/company"
-            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+            className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
           >
-            <FaBuilding className="text-indigo-600" /> Companies
+            <FaBuilding className="text-blue-800" /> Companies
           </Link>
           <Link
             to="/startup"
-            className="flex items-center gap-2 hover:text-indigo-600 transition duration-300"
+            className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
           >
-            <FaBuilding className="text-indigo-600" /> Startup
+            <FaBuilding className="text-blue-800" /> Startup
           </Link>
         </nav>
 
@@ -204,7 +210,7 @@ const Header = () => {
             <>
               <Link
                 to="/profile"
-                className="text-center p-3 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition duration-300"
+                className="text-center p-3 text-white bg-blue-800 rounded-md hover:bg-blue-800 transition duration-300"
               >
                 Profile
               </Link>
@@ -219,7 +225,7 @@ const Header = () => {
             <>
               <Link
                 to="/signup"
-                className="text-center p-3 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition duration-300"
+                className="text-center p-3 text-white bg-blue-800 rounded-md hover:bg-blue-800 transition duration-300"
               >
                 Sign Up
               </Link>

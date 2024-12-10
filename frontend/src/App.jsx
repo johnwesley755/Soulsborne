@@ -23,6 +23,7 @@ import { GigProvider } from "./context/GigContext";
 import { ProfileProvider } from "./context/ProfileContext";
 import CommunityPage from "./pages/CommunityPage";
 import StartupPage from "./pages/StartupPage";
+import About from "./pages/About";
 const App = () => {
   return (
     <Router>
@@ -44,6 +45,7 @@ const App = () => {
             <Route path="/jobpost" element={<JobPost />} />
             <Route path="/startup" element={<StartupPage />} />
             <Route path="/startup/:id" element={<StartupDetails />} />
+            <Route path='/about' element={<About />} />
 
             {/* Added StartupDetail route */}
             {/* Routes for freelance-related pages */}
