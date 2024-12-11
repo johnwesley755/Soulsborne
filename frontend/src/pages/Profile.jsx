@@ -6,6 +6,7 @@ import Select from "react-select";
 import illustrationImage from "../assets/hero-img.svg"; // Your illustration image
 import countries from "react-select-country-list"; // Import country list
 import { FaRobot } from "react-icons/fa";
+import Chatbot from "../components/Chatbot";
 
 const Profile = () => {
   const [selectedCountry, setSelectedCountry] = useState("US");
@@ -20,7 +21,7 @@ const Profile = () => {
   const [profileImage, setProfileImage] = useState(null);
 
   const [chatOpen, setChatOpen] = useState(false); // To toggle chat visibility
-  const [messages, setMessages] = useState([]);
+
   const [input, setInput] = useState("");
 
   // Dynamically load country options for react-select with flags
@@ -48,59 +49,6 @@ const Profile = () => {
   };
 
   // Function to handle chatbot input
-  const handleSendMessage = () => {
-    if (input.trim()) {
-      // Add user message to chat
-      const newMessages = [...messages, { text: input, sender: "user" }];
-      setMessages(newMessages);
-      setInput(""); // Clear input field
-
-      // Display "Bot is typing..." message
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        { text: "Bot is typing...", sender: "bot" },
-      ]);
-
-      // Simulate bot response after a delay
-      setTimeout(() => {
-        setMessages((prevMessages) =>
-          prevMessages.filter((msg) => msg.text !== "Bot is typing...")
-        ); // Remove "Bot is typing..."
-
-        // Generate a bot response based on user input
-        const response = generateBotResponse(input);
-        setMessages((prevMessages) => [
-          ...prevMessages,
-          { text: response, sender: "bot" },
-        ]);
-      }, 1000);
-    } else {
-      alert("Please enter a valid message!");
-    }
-  };
-
-  // Function to generate bot responses
-  const generateBotResponse = (userMessage) => {
-    const lowerMessage = userMessage.toLowerCase();
-
-    // Example dynamic responses
-    if (lowerMessage.includes("hello") || lowerMessage.includes("hi")) {
-      return "Hi there! How can I assist you today?";
-    } else if (lowerMessage.includes("help")) {
-      return "Sure! Can you please specify what you need help with?";
-    } else if (
-      lowerMessage.includes("thank you") ||
-      lowerMessage.includes("thanks")
-    ) {
-      return "You're welcome! Is there anything else I can help you with?";
-    } else if (lowerMessage.includes("bye")) {
-      return "Goodbye! Have a great day!";
-    } else if (lowerMessage.length > 200) {
-      return "Your message is too long. Can you summarize it for me?";
-    } else {
-      return "I'm not sure I understand. Can you clarify?";
-    }
-  };
 
   // Function to handle profile update
   const handleUpdateProfile = () => {
@@ -342,70 +290,10 @@ const Profile = () => {
               onClick={() => setChatOpen(!chatOpen)}
             >
               <FaRobot className="text-3xl font-extrabold" />
+              <Chatbot />
             </div>
 
-            {/* Chat Interface */}
-            {chatOpen && (
-              <div className="absolute bottom-20 right-0 w-80 border rounded-lg bg-gradient-to-br from-gray-100 to-gray-300 shadow-2xl">
-                {/* Chat Header */}
-                <div className="flex items-center justify-between p-3 bg-indigo-600 text-white rounded-t-lg">
-                  <h3 className="text-lg font-bold">Chatbot</h3>
-                  <button
-                    className="text-white hover:text-gray-200 transition-colors"
-                    onClick={() => setChatOpen(false)}
-                  >
-                    <i className="fas fa-times"></i>
-                  </button>
-                </div>
-
-                {/* Chat Messages */}
-                <div className="h-60 overflow-y-auto p-3 space-y-3 bg-white border-t">
-                  {messages.map((msg, index) => (
-                    <div
-                      key={index}
-                      className={`flex ${
-                        msg.sender === "user" ? "justify-end" : "justify-start"
-                      }`}
-                    >
-                      <div
-                        className={`p-3 rounded-lg shadow-sm ${
-                          msg.sender === "user"
-                            ? "bg-indigo-600 text-white"
-                            : "bg-gray-200 text-gray-800"
-                        }`}
-                      >
-                        <span className="font-bold">
-                          {msg.sender === "user" ? "You: " : "Bot: "}
-                        </span>
-                        {msg.text}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Input Section */}
-                <div className="flex items-center p-3 border-t bg-gray-50">
-                  <input
-                    type="text"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                    placeholder="Type a message..."
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        handleSendMessage();
-                      }
-                    }}
-                  />
-                  <button
-                    className="ml-2 bg-indigo-600 text-white px-4 py-2 rounded-full shadow-md hover:bg-indigo-700 transition-all"
-                    onClick={handleSendMessage}
-                  >
-                    <i className="fas fa-paper-plane"></i>
-                  </button>
-                </div>
-              </div>
-            )}
+          
           </div>
         </motion.div>
       </motion.div>
