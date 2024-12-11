@@ -1,3 +1,8 @@
+import santoshImg from "../assets/santhosh-2.jpeg"
+import krithikImg from "../assets/krithi-sri(2).jpg"
+import raghulImg from "../assets/raghul.jpg"
+import darshanaImg from "../assets/darshana.jpeg"
+import abinaImg from "../assets/abinasri.jpeg"
 const teamMembers = [
   {
     name: "Dr. Priscilla",
@@ -11,7 +16,7 @@ const teamMembers = [
   {
     name: "Santhosh",
     role: "Project Management",
-    image: "/src/assets/santhosh-2.jpeg",
+    image: santoshImg,
     bio: "Santhosh excel at planning, organizing, and coordinating resources to ensure projects are delivered successfully within scope, time, and budget.",
     email: "santhosh200@gmail.com",
     skills: ["Agile Management", "Scrum", "Leadership"],
@@ -19,7 +24,7 @@ const teamMembers = [
   {
     name: "Krithik Srinivas",
     role: "Backend Developer",
-    image: "/src/assets/krithi-sri(2).jpg",
+    image: krithikImg,
     bio: "Krithik specializes in backend systems and database management, ensuring robust and scalable server-side solutions.",
     email: "krithiksrinivas200@gmail.com",
     skills: ["Node.js", "Express", "MongoDB", "SQL"],
@@ -27,7 +32,7 @@ const teamMembers = [
   {
     name: "Raghul Chandramouli",
     role: "Cloud Architect",
-    image: "/src/assets/raghul.jpg",
+    image: raghulImg,
     bio: " I design and implement scalable, secure, and cost-efficient cloud infrastructure to meet organizational goals.",
     email: "raghulchandramouli@gmail.com",
     skills: ["Networking", "System Design", "Databases"],
@@ -35,7 +40,7 @@ const teamMembers = [
 {
     name: "Darshana Kiruthika",
     role: "Front-End Developer",
-    image: "/src/assets/darshana.jpeg",
+    image: darshanaImg,
     bio: "Darshana crafts interactive and visually appealing web interfaces, focusing on user-centric designs and responsive layouts.",
     email: "darshana.kiruthika@example.com",
     skills: ["React", "Tailwind CSS", "JavaScript", "UI/UX Design"],
@@ -44,7 +49,7 @@ const teamMembers = [
 {
     name: "Abina Sri",
     role: "Market Research Analyst",
-    image: "/src/assets/abinasri.jpeg",
+    image: abinaImg,
     bio: "Abina uncovers market trends and consumer insights, driving strategic decisions through data analysis and competitive research.",
     email: "abina.sri@example.com",
     skills: ["Data Analysis", "Market Trends", "Competitive Research", "Survey Design"],

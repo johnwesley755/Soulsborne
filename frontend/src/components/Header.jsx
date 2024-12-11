@@ -9,6 +9,7 @@ import {
   FaBuilding,
   FaSignOutAlt,
   FaUserEdit,
+  FaUser,
 } from "react-icons/fa";
 import soulsborneImg from "../assets/soulsborne-logo.svg";
 
@@ -119,7 +120,7 @@ const Header = () => {
                     to="/about"
                     className="flex items-center gap-2 p-2 hover:bg-gray-100 transition duration-300 rounded-md"
                   >
-                    <FaUserEdit /> About Us
+                    <FaUser /> About Us
                   </Link>
                   <button
                     onClick={handleLogout}
@@ -213,6 +214,12 @@ const Header = () => {
                 className="text-center p-3 text-white bg-blue-800 rounded-md hover:bg-blue-800 transition duration-300"
               >
                 Profile
+              </Link>
+              <Link
+                to="/about"
+                className="text-center p-3 text-white bg-blue-800 rounded-md hover:bg-blue-800 transition duration-300"
+              >
+                 About Us
               </Link>
               <button
                 onClick={handleLogout}
