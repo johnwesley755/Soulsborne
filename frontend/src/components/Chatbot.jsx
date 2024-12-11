@@ -1,7 +1,7 @@
-// Chatbot.jsx
 import React, { useState } from "react";
 import { FaRobot } from "react-icons/fa";
 import { BsFillImageFill } from "react-icons/bs";
+import { toast } from "react-toastify";
 
 const Chatbot = () => {
   const [chatOpen, setChatOpen] = useState(false);
@@ -14,7 +14,7 @@ const Chatbot = () => {
       setInput("");
       simulateBotResponse(input);
     } else {
-      alert("Please enter a valid message!");
+      toast.warn("Please enter a valid message!");
     }
   };
 
@@ -60,19 +60,8 @@ const Chatbot = () => {
       "Can you elaborate a bit more on that?",
       "Is there anything specific you'd like to know?",
       "I'm happy to guide you. Go ahead and ask!",
-      "I can help with general inquiries. What's on your mind?",
-      "Feel free to upload any files or images if that helps explain.",
-      "I'm learning every day! Thanks for your patience.",
-      "Can I assist you with anything else?",
-      "Good question! Let me find the best answer for you.",
-      "I see. Let's break that down.",
-      "I'm here to make things easier. What's next?",
-      "Thanks for sharing. Let me respond to that.",
-      "Have a moment? I’ll find a response for you.",
-      "That's cool! Let me learn more about that.",
     ];
 
-    // Randomized response for variety
     if (lowerMessage.includes("hello")) return responses[0];
     if (lowerMessage.includes("help")) return responses[1];
     if (lowerMessage.includes("thanks")) return responses[2];

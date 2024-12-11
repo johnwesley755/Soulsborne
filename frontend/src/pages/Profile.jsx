@@ -284,7 +284,7 @@ const Profile = () => {
   
           <div className="fixed bottom-5 right-5 z-50">
             {/* Robot Icon */}
-
+          
             <div
               className="flex items-center justify-center w-16 h-16 bg-gradient-to-b from-indigo-900 to-purple-900 border text-white rounded-full shadow-lg cursor-pointer transform hover:scale-110 transition-transform animate-bounce"
               onClick={() => setChatOpen(!chatOpen)}
