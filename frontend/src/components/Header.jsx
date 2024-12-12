@@ -74,12 +74,7 @@ const Header = () => {
           >
             <FaHome className="text-blue-800" /> Home
           </Link>
-          <Link
-            to="/freelance"
-            className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
-          >
-            <FaBriefcase className="text-blue-800" /> Freelancing
-          </Link>
+    
           <Link
             to="/tasks"
             className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
@@ -90,7 +85,7 @@ const Header = () => {
             to="/company"
             className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
           >
-            <FaBuilding className="text-blue-800" /> Companies
+            <FaBuilding className="text-blue-800" /> Investors
           </Link>
           <Link
             to="/startup"
@@ -179,12 +174,7 @@ const Header = () => {
           >
             <FaHome className="text-blue-800" /> Home
           </Link>
-          <Link
-            to="/freelance"
-            className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
-          >
-            <FaBriefcase className="text-blue-800" /> Freelancing
-          </Link>
+       
           <Link
             to="/tasks"
             className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
@@ -195,7 +185,7 @@ const Header = () => {
             to="/company"
             className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
           >
-            <FaBuilding className="text-blue-800" /> Companies
+            <FaBuilding className="text-blue-800" /> Investors
           </Link>
           <Link
             to="/startup"
