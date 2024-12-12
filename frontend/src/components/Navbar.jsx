@@ -36,7 +36,7 @@ const Navbar = ({ containerStyles }) => {
         href="https://www.example.com" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="nav-item"
+        className="nav-item"g
       >
         Pitch Deck
       </a>

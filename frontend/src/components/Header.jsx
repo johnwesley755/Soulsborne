@@ -76,12 +76,6 @@ const Header = () => {
           </Link>
     
           <Link
-            to="/tasks"
-            className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
-          >
-            <FaTasks className="text-blue-800" /> Tasks
-          </Link>
-          <Link
             to="/company"
             className="flex items-center gap-2 hover:text-blue-800 transition duration-300"
           >
@@ -93,6 +87,7 @@ const Header = () => {
           >
             <FaBuilding className="text-blue-800" /> Startup
           </Link>
+          <a href="http://localhost:3000/dashboard">Pitch Desk</a>
         </nav>
 
         {/* User Section for Desktop */}
