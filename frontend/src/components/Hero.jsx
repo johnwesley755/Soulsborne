@@ -53,7 +53,7 @@ const HeroSection = () => {
         {/* Statistics Section */}
         <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 max-w-5xl w-full">
           {/* Stat 1 */}
-          <div className="flex flex-col items-center text-center">
+          {/* <div className="flex flex-col items-center text-center">
             <div className="p-2 sm:p-3 bg-violet-500 rounded-full mb-2 sm:mb-3">
               <FaUsers className="text-yellow-400 text-xl sm:text-2xl" />
             </div>
@@ -61,7 +61,7 @@ const HeroSection = () => {
               20,000+
             </h3>
             <p className="text-xs sm:text-sm text-gray-300">Global Users</p>
-          </div>
+          </div> */}
 
           {/* Stat 2 */}
           <div className="flex flex-col items-center text-center">

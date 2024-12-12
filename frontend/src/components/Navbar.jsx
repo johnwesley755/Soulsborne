@@ -13,7 +13,6 @@ const Navbar = ({ containerStyles }) => {
     <nav className={containerStyles}>
 
 
-
       {/* Navigation Links */}
       <NavLink
         to={"/"}
@@ -33,33 +32,24 @@ const Navbar = ({ containerStyles }) => {
           Profile
         </div>
       </NavLink>
-      <NavLink
-        to={"/tasks"}
-        className={({ isActive }) => (isActive ? "active_link" : "")}
+      <a 
+        href="https://www.example.com" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="nav-item"
       >
-        <div className="flexCenter gap-x-1">
-          <FaTasks /> {/* Tasks Icon */}
-          Tasks
-        </div>
-      </NavLink>
+        Pitch Deck
+      </a>
       <NavLink
         to={"/company"}
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
           <FaBuilding /> {/* Company Icon */}
-          Company
+          Investors
         </div>
       </NavLink>
-      <NavLink
-        to={"/freelance"}
-        className={({ isActive }) => (isActive ? "active_link" : "")}
-      >
-        <div className="flexCenter gap-x-1">
-          <FaSuitcase /> {/* Freelance Icon */}
-          Freelancing
-        </div>
-      </NavLink>
+
     </nav>
   );
 };

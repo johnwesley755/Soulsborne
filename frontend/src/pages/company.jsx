@@ -1,230 +1,142 @@
 import React from "react";
 import { motion } from "framer-motion";
-import tcsImage from "../assets/tcs.svg";
-import infosysImage from "../assets/infosys.svg";
-import wiproImage from "../assets/wipro.svg";
-import hclImage from "../assets/hcl.svg";
-import techMahindra from "../assets/tech-mahindra.svg";
-import jioImage from "../assets/reliance-jio.svg";
-import flipkartImage from "../assets/flipkart.svg";
-import olaImage from "../assets/ola.svg";
-import zomatoImage from "../assets/zomato.svg";
-import swiggyImage from "../assets/swiggy.svg";
-import paytmImage from "../assets/paytm.svg";
-import phonepeImage from "../assets/phonepe.svg";
-import byjusImage from "../assets/byjus.svg";
-import oyoImage from "../assets/oyo.png";
-import delhiveryImg from "../assets/delhivery.svg";
-import hdfcImg from "../assets/hdfc-bank.svg";
-import tataSteels from "../assets/tata-steel.svg";
-import mahindraImg from "../assets/mahindra.svg";
-import adaniImg from "../assets/adani.svg";
-import larsenImg from "../assets/larsen-tourbo.svg";
 
-// Sample company data
-const companies = [
+// Sample investors data
+const investors = [
   {
     id: 1,
-    name: "Tata Consultancy Services (TCS)",
-    role: "Software Engineer",
-    image: tcsImage,
+    name: "Sequoia Capital",
+    role: "Venture Capitalist",
+    image: "https://via.placeholder.com/100",
     description:
-      "India's largest IT services company, providing consulting and business solutions.",
-    skills: ["Java", "Cloud Computing", "AI/ML", "Agile Development"],
+      "One of the top venture capital firms, funding startups and technology leaders globally.",
+    specialties: ["Tech Startups", "AI/ML", "Fintech", "Healthcare"],
   },
   {
     id: 2,
-    name: "Infosys",
-    role: "Data Scientist",
-    image: infosysImage,
-    description: "Global leader in technology services and consulting.",
-    skills: ["Python", "Data Analysis", "SQL", "Machine Learning"],
+    name: "Accel",
+    role: "Angel Investor",
+    image: "https://via.placeholder.com/100",
+    description:
+      "Early and growth-stage venture capital firm supporting innovative companies.",
+    specialties: ["Consumer Internet", "Enterprise Software", "E-commerce"],
   },
   {
     id: 3,
-    name: "Wipro",
-    role: "Cloud Architect",
-    image: wiproImage,
-    description: "Leader in IT, consulting, and business process services.",
-    skills: ["AWS", "Azure", "DevOps", "Kubernetes"],
+    name: "SoftBank Vision Fund",
+    role: "Private Equity Investor",
+    image: "https://via.placeholder.com/100",
+    description:
+      "Global technology investment firm focused on AI-driven businesses.",
+    specialties: ["Artificial Intelligence", "E-commerce", "Transportation"],
   },
   {
     id: 4,
-    name: "HCL Technologies",
-    role: "Cybersecurity Specialist",
-    image: hclImage,
+    name: "Tiger Global Management",
+    role: "Growth Investor",
+    image: "https://via.placeholder.com/100",
     description:
-      "Global IT service company with expertise in digital solutions and product engineering.",
-    skills: [
-      "Network Security",
-      "Penetration Testing",
-      "Risk Management",
-      "Firewalls",
-    ],
+      "Focuses on long-term investments in global internet, software, and fintech companies.",
+    specialties: ["SaaS", "Fintech", "Cloud Computing", "B2B Solutions"],
   },
   {
     id: 5,
-    name: "Tech Mahindra",
-    role: "AI Engineer",
-    image: techMahindra,
+    name: "Andreessen Horowitz (a16z)",
+    role: "Venture Capitalist",
+    image: "https://via.placeholder.com/100",
     description:
-      "A leading provider of digital transformation, consulting, and business re-engineering.",
-    skills: [
-      "Deep Learning",
-      "Natural Language Processing",
-      "TensorFlow",
-      "AI Algorithms",
-    ],
+      "Leading venture capital firm investing in software, fintech, and cryptocurrencies.",
+    specialties: ["Cryptocurrency", "Blockchain", "SaaS", "AI/ML"],
   },
   {
     id: 6,
-    name: "Reliance Jio",
-    role: "DevOps Engineer",
-    image: jioImage,
+    name: "Lightspeed Venture Partners",
+    role: "Seed Investor",
+    image: "https://via.placeholder.com/100",
     description:
-      "Telecom giant and technology innovator, providing cutting-edge solutions.",
-    skills: ["CI/CD Pipelines", "Docker", "Ansible", "Kubernetes"],
+      "Focuses on accelerating startups in various industries like technology and healthcare.",
+    specialties: ["Seed Funding", "Healthcare", "AI/ML", "Cybersecurity"],
   },
   {
     id: 7,
-    name: "Flipkart",
-    role: "Full Stack Developer",
-    image: flipkartImage,
-    description: "India's leading e-commerce marketplace.",
-    skills: ["React", "Node.js", "MongoDB", "Express.js"],
+    name: "General Catalyst",
+    role: "Early-Stage Investor",
+    image: "https://via.placeholder.com/100",
+    description:
+      "Provides early-stage investments to startups with high potential for innovation.",
+    specialties: ["Digital Health", "AI/ML", "E-commerce", "SaaS"],
   },
   {
     id: 8,
-    name: "Ola Cabs",
-    role: "Mobile App Developer",
-    image: olaImage,
+    name: "Bain Capital Ventures",
+    role: "Private Equity Firm",
+    image: "https://via.placeholder.com/100",
     description:
-      "India's popular ride-hailing company offering transportation services.",
-    skills: ["Kotlin", "Swift", "React Native", "Flutter"],
+      "Investing in pioneering companies in the technology, healthcare, and consumer sectors.",
+    specialties: ["Technology", "Consumer Goods", "Healthcare", "SaaS"],
   },
   {
     id: 9,
-    name: "Zomato",
-    role: "Product Manager",
-    image: zomatoImage,
+    name: "Benchmark Capital",
+    role: "Venture Partner",
+    image: "https://via.placeholder.com/100",
     description:
-      "One of India's top food delivery platforms and restaurant guide services.",
-    skills: ["Product Roadmap", "User Research", "Agile Methodology", "UI/UX"],
+      "Focused on early-stage investments in transformative companies.",
+    specialties: ["Enterprise Software", "Fintech", "Social Media", "Tech"],
   },
   {
     id: 10,
-    name: "Swiggy",
-    role: "Backend Developer",
-    image: swiggyImage,
+    name: "Kleiner Perkins",
+    role: "Venture Capitalist",
+    image: "https://via.placeholder.com/100",
     description:
-      "India's largest and most popular online food ordering and delivery platform.",
-    skills: ["Node.js", "Python", "SQL", "Microservices"],
+      "Well-known for funding early-stage companies and helping them scale globally.",
+    specialties: ["Green Technology", "Biotech", "AI/ML", "Cloud Computing"],
   },
   {
     id: 11,
-    name: "Paytm",
-    role: "Blockchain Developer",
-    image: paytmImage,
+    name: "Matrix Partners",
+    role: "Seed Investor",
+    image: "https://via.placeholder.com/100",
     description:
-      "India's leading digital wallet and financial services platform.",
-    skills: ["Blockchain Protocols", "Smart Contracts", "Ethereum", "Solidity"],
+      "Supports entrepreneurs in building great businesses across sectors.",
+    specialties: ["Consumer Internet", "Cloud Infrastructure", "HealthTech"],
   },
   {
     id: 12,
-    name: "PhonePe",
-    role: "Data Engineer",
-    image: phonepeImage,
-    description: "A top player in the digital payments ecosystem.",
-    skills: ["Big Data", "Hadoop", "Kafka", "Spark"],
+    name: "Bessemer Venture Partners",
+    role: "Venture Capitalist",
+    image: "https://via.placeholder.com/100",
+    description:
+      "Invests in entrepreneurs with groundbreaking ideas in various industries.",
+    specialties: ["Enterprise Software", "Healthcare", "Consumer Products"],
   },
   {
     id: 13,
-    name: "Byju's",
-    role: "UI/UX Designer",
-    image: byjusImage,
-    description: "India's leading ed-tech company offering online education.",
-    skills: ["Wireframing", "Prototyping", "Figma", "Adobe XD"],
+    name: "GV (Google Ventures)",
+    role: "Corporate Investor",
+    image: "https://via.placeholder.com/100",
+    description:
+      "Supports founders who are creating the next big advancements in technology.",
+    specialties: ["AI/ML", "Life Sciences", "Robotics", "Sustainability"],
   },
   {
     id: 14,
-    name: "OYO Rooms",
-    role: "Growth Hacker",
-    image: oyoImage,
-    description: "India's largest hospitality chain.",
-    skills: ["SEO", "Digital Marketing", "Data Analytics", "User Acquisition"],
+    name: "Fidelity Investments",
+    role: "Institutional Investor",
+    image: "https://via.placeholder.com/100",
+    description:
+      "A leading provider of investment solutions across the financial and technology sectors.",
+    specialties: ["Fintech", "AI/ML", "SaaS", "Big Data"],
   },
   {
     id: 15,
-    name: "Delhivery",
-    role: "Supply Chain Manager",
-    image: delhiveryImg,
-    description: "Leading logistics and supply chain company in India.",
-    skills: [
-      "Supply Chain Management",
-      "Logistics Planning",
-      "Inventory Control",
-    ],
-  },
-  {
-    id: 16,
-    name: "HDFC Bank",
-    role: "Financial Analyst",
-    image: hdfcImg,
-    description: "One of India's largest private sector banks.",
-    skills: ["Financial Modeling", "Data Analysis", "Risk Assessment", "Excel"],
-  },
-  {
-    id: 17,
-    name: "Tata Steel",
-    role: "Mechanical Engineer",
-    image: tataSteels,
-    description: "India's top steel manufacturer and global industry leader.",
-    skills: [
-      "CAD",
-      "Structural Analysis",
-      "Thermodynamics",
-      "Material Science",
-    ],
-  },
-  {
-    id: 18,
-    name: "Mahindra & Mahindra",
-    role: "Automotive Engineer",
-    image: mahindraImg,
-    description: "Leading manufacturer of automobiles and commercial vehicles.",
-    skills: [
-      "Automobile Design",
-      "Vehicle Dynamics",
-      "Electric Vehicles",
-      "CAD",
-    ],
-  },
-  {
-    id: 19,
-    name: "Adani Group",
-    role: "Energy Consultant",
-    image: adaniImg,
+    name: "Insight Partners",
+    role: "Growth Equity Investor",
+    image: "https://via.placeholder.com/100",
     description:
-      "A diversified business conglomerate with interests in energy, infrastructure, and logistics.",
-    skills: [
-      "Energy Management",
-      "Renewable Energy",
-      "Power Systems",
-      "Sustainability",
-    ],
-  },
-  {
-    id: 20,
-    name: "Larsen & Toubro (L&T)",
-    role: "Civil Engineer",
-    image: larsenImg,
-    description: "India's leading engineering and construction company.",
-    skills: [
-      "Structural Engineering",
-      "Project Management",
-      "Construction Design",
-      "AutoCAD",
-    ],
+      "Helps high-growth technology companies scale rapidly.",
+    specialties: ["Cloud Computing", "DevOps", "Enterprise Software"],
   },
 ];
 
@@ -235,19 +147,18 @@ const Company = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-6xl font-extrabold text-white drop-shadow-md">
-            Explore Top Indian Companies
+            Explore Top Investors
           </h1>
           <p className="text-2xl text-white mt-4 font-bold">
-            Discover in-demand roles, required skills, and top companies in
-            India
+            Discover leading investors, their focus areas, and specialties.
           </p>
         </div>
 
-        {/* Companies Grid */}
+        {/* Investors Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {companies.map((company) => (
+          {investors.map((investor) => (
             <motion.div
-              key={company.id}
+              key={investor.id}
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transform transition-all duration-300 hover:scale-105"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -255,28 +166,26 @@ const Company = () => {
             >
               <div className="flex items-center justify-between mb-6">
                 <img
-                  src={company.image}
-                  alt={company.name}
+                  src={investor.image}
+                  alt={investor.name}
                   className="w-20 h-20 object-contain rounded-md border-2 border-gray-200"
                 />
                 <h2 className="text-xl font-bold text-gray-800 text-right">
-                  {company.name}
+                  {investor.name}
                 </h2>
               </div>
-              <p className="text-sm text-gray-600 mb-4">
-                {company.description}
-              </p>
+              <p className="text-sm text-gray-600 mb-4">{investor.description}</p>
               <div className="mb-4">
                 <h3 className="text-lg font-extrabold text-purple-900">
-                  In-demand Role: {company.role}
+                  Focus Area: {investor.role}
                 </h3>
                 <p className="text-sm text-gray-500 mt-1 font-medium">
-                  Skills Needed:
+                  Specialties:
                 </p>
                 <ul className="list-disc pl-6 text-gray-700">
-                  {company.skills.map((skill, index) => (
+                  {investor.specialties.map((specialty, index) => (
                     <li key={index} className="font-medium">
-                      {skill}
+                      {specialty}
                     </li>
                   ))}
                 </ul>
@@ -288,5 +197,7 @@ const Company = () => {
     </section>
   );
 };
+
+
 
 export default Company;
